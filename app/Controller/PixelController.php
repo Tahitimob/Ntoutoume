@@ -8,13 +8,13 @@ class PixelController extends Controller
 {
 	public function create()
 	{
-		if(isset($_SESSION['id'])){
-			$user = new UserModel();
-			$user = $user->find($_SESSION['id']);
-			$this->show('pixel/create', ['user' => $user]);
-		} else {
-			$this->redirectToRoute('default_home');
-		}
+		// if(isset($_SESSION['id'])){
+		// 	$user = new UserModel();
+		// 	$user = $user->find($_SESSION['id']);
+			$this->show('pixel/create');
+		// } else {
+		// 	$this->redirectToRoute('default_home');
+		// }
 	}
 	
 }
