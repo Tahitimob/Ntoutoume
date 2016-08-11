@@ -2,12 +2,13 @@
 
 <?php $this->start('main_content') ?>
 <div id="home" class="">
-	<div class="row">
+	<div class="container">
 		<div class="jumbotron">
-	  		<div class="container">
+			<img src="assets/img/logo.png">
+	  		
 	   			<h1>Welcome on Pix'Hell</h1>
 	   			<p>Viens on est bien Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, nulla tempora, quis dicta ipsam, aperiam delectus quaerat praesentium nihil perferendis quas possimus. Mollitia magni exercitationem autem eum, aliquid atque laudantium.</p>
-	  		</div>
+	  		
 	  		<p><a class="btn btn-primary btn-lg" href="#" role="button">Créer</a></p>
 		</div>
 	</div>
@@ -90,24 +91,24 @@
 	<form class="form-horizontal">
 	  	<div class="form-group">
 	    		<label for="inputNom" class="col-sm-2 control-label">Nom :</label>
-	    	<div class="col-sm-10">
+	    	<div class="col-sm-8">
 	      		<input type="text" class="form-control" id="inputNom" placeholder="Nom">
 	    	</div>
 	  	</div>
   		<div class="form-group">
     		<label for="inputPrenom" class="col-sm-2 control-label">Prenom :</label>
-    		<div class="col-sm-10">
-      			<input type="text" class="form-control" id="inputPassword3" placeholder="Prenom">
+    		<div class="col-sm-8">
+      			<input type="text" class="form-control" id="inputPrenom" placeholder="Prenom">
     		</div>
   		</div>
   		<div class="form-group">
-    		<label for="inputPassword3" class="col-sm-2 control-label">Email :</label>
-    		<div class="col-sm-10">
-      			<input type="email" class="form-control" id="inputPassword3" placeholder="Email">
+    		<label for="inputMail" class="col-sm-2 control-label">Email :</label>
+    		<div class="col-sm-8">
+      			<input type="email" class="form-control" id="inputMail" placeholder="Email">
     		</div>
   		</div>
 	  	<div class="form-group">
-	    <div class="col-sm-offset-2 col-sm-10">
+	    <div class="col-sm-offset-2 col-sm-8">
 	      <button type="submit" class="btn btn-default">Envoyer</button>
 	    </div>
 	    </div>

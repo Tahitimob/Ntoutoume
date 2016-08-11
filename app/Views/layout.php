@@ -20,7 +20,7 @@
 	        <span class="icon-bar"></span>
 	      </button>
 	      <a class="navbar-brand" href="<?= $this->url('default_home') ?>">
-			<img class="brandStyle" alt="Brand" src="assets/img/logo50px.png">
+			<img class="brandStyle" alt="Logo pix'hell" src="assets/img/logo50px.png">
 	      </a>
 	    </div>
 
@@ -41,7 +41,7 @@
 		<section  class="text-center">
 			<?= $this->section('main_content') ?>
 		</section>
-
+	
 		<footer>
 			<p class="text-center navbar-invert">Created by Canivez Samuel, Deville Halim, Desramé Thibaut</p>
 			<script src="<?= $this->assetUrl("vendor/jquery/dist/jquery.min.js") ?>"></script>
