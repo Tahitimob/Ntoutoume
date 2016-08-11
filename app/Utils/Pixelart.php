@@ -1,6 +1,7 @@
 <?php
 
-
+namespace Utils;
+use \Model\PixelModel ;
 
 class Pixelart {
 	private $chain;
@@ -8,8 +9,11 @@ class Pixelart {
 	public function verifHexa($array)
 	{
 		foreach($array as $color){
-			//verif que color est un hexa valide
+			if(!preg_match("/^#[0-9A-Fa-f]{6};$/" , $color)){
+				return false;
+			}
 		}
+		return true;
 	}
 
 	public function arrayToString($array){
@@ -41,4 +45,6 @@ class Pixelart {
 		$bloc .= '</div>';
 		echo $bloc;
 	}
+
+
 }

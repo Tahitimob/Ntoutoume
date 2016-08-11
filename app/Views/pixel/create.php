@@ -1,10 +1,7 @@
 <?php $this->layout('layout', ['title' => "Create - Pix'Hell"]) ?>
-<?php 
-	if(isset($_POST['colors'])){
-		foreach($_POST['colors'] as $color){
-			echo $color;
-		};
-	}
+<?php $this->start('create_pixel');
+
+	$this->stop('create_pixel');
 ?>
 <?php $this->start('main_content') ?>
 <style>
@@ -12,9 +9,9 @@
 	width: 50px;
 	height: 50px;
 }</style>
-<div class="case" style="background-color: #010203"></div>
-<div class="case" style="background-color: #456789"></div>
-<div class="case" style="background-color: #FFFFFF"></div>
+<?php
+	$pixel->create();
+?>
 <form method="POST">
 	<button class="submit">Test</button>
 </form>

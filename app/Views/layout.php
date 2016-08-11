@@ -12,13 +12,13 @@
 		<header>
 			<h1>W :: <?= $this->e($title) ?></h1>
 		</header>
-
+		<section>
+			<?= $this->section('create_pixel') ?>
+		</section>
 		<section>
 			<?= $this->section('main_content') ?>
 		</section>
-		<form method="POST">
-			<button class="submit">Test</button>
-		</form>
+		
 		
 		<footer>
 		</footer>
