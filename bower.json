@@ -1,0 +1,19 @@
+{
+  "name": "projetWF3",
+  "homepage": "https://github.com/projetWF3pix/projetWF3",
+  "authors": [
+    "Aequin0x <thibaut.desrame@gmail.com>"
+  ],
+  "description": "Proj pixhell",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "public/assets/vendor/"
+  ]
+}
