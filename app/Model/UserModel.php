@@ -5,4 +5,5 @@ use \W\Model\UsersModel;
 
 class UserModel extends UsersModel{
 
+	
 }

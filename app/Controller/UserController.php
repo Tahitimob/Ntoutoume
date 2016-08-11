@@ -12,5 +12,36 @@ class UserController extends Controller
 		$users = $user->findAll();
 		$this->show('user/list', ['users' => $users]);
 	}
+	public function affiche($id)
+	{
+		$user = new UserModel();
+		$user = $user->find($id);
+		$this->show('user/show', ['user' => $user]);
+	}
 
+
+	public function inscription(){
+		$this->show('user/inscription');
+	}
+
+	public function profil(){
+		if(isset($_SESSION['id'])){
+			$user = new UserModel();
+			$user = $user->find($_SESSION['id']);
+			$this->show('user/profil', 'user' => $user);
+		} else {
+			$this->redirectToRoute('default_home')
+		}
+	}
+
+	public function create()
+	{
+		if(isset($_SESSION['id'])){
+			$user = new UserModel();
+			$user = $user->find($_SESSION['id']);
+			$this->show('user/create', 'user' => $user);
+		} else {
+			$this->redirectToRoute('default_home')
+		}
+	}
 }

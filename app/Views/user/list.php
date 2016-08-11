@@ -1,4 +1,4 @@
-<?php $this->layout('layout', ['title' => 'Accueil']) ?>
+<?php $this->layout('layout', ['title' => "Utilisateurs - Pix'Hell"]) ?>
 
 <?php $this->start('main_content') ?>
 	<h2>Liste des utilisateurs</h2>
