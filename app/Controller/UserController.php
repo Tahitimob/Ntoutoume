@@ -28,9 +28,9 @@ class UserController extends Controller
 		if(isset($_SESSION['id'])){
 			$user = new UserModel();
 			$user = $user->find($_SESSION['id']);
-			$this->show('user/profil', 'user' => $user);
+			$this->show('user/profil', ['user' => $user]);
 		} else {
-			$this->redirectToRoute('default_home')
+			$this->redirectToRoute('default_home');
 		}
 	}
 
@@ -39,9 +39,9 @@ class UserController extends Controller
 		if(isset($_SESSION['id'])){
 			$user = new UserModel();
 			$user = $user->find($_SESSION['id']);
-			$this->show('user/create', 'user' => $user);
+			$this->show('user/create', ['user' => $user]);
 		} else {
-			$this->redirectToRoute('default_home')
+			$this->redirectToRoute('default_home');
 		}
 	}
 }
