@@ -8,6 +8,7 @@
 </head>
 <body>
 	<div class="container">
+		
 		<header>
 			<h1>W :: <?= $this->e($title) ?></h1>
 		</header>
@@ -15,9 +16,9 @@
 		<section>
 			<?= $this->section('main_content') ?>
 		</section>
-
-		<footer>
-		</footer>
+		
 	</div>
+	<script src="<?= $this->assetUrl('js/jquery-3.1.0.min.js') ?>"></script>
+	<script src="<?= $this->assetUrl('js/script.js') ?>"></script>
 </body>
 </html>
