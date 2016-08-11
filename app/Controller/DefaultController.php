@@ -6,7 +6,6 @@ use \W\Controller\Controller;
 
 class DefaultController extends Controller
 {
-
 	/**
 	 * Page d'accueil par défaut
 	 */
@@ -14,5 +13,4 @@ class DefaultController extends Controller
 	{
 		$this->show('default/home');
 	}
-
 }
