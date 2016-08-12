@@ -30,7 +30,7 @@
 	        <li><a href="<?= $this->url('default_home') ?>">Accueil</a></li>
 			<li><a href="<?= $this->url('user_inscription') ?>">Inscription</a></li>
 			<li><a href="<?= $this->url('security_login') ?>">Login</a></li>
-			<li><a href="<?= $this->url('user_create') ?>">Création</a></li>
+			<li><a href="<?= $this->url('pixel_create') ?>">Création</a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
@@ -42,14 +42,22 @@
 			<?= $this->section('main_content') ?>
 		</section>
 
-	<div class="container">
-	<footer>
-			<p class="text-center navbar-invert">Created by Canivez Samuel, Deville Halim, Desramé Thibaut</p>
-			<script src="<?= $this->assetUrl("vendor/jquery/dist/jquery.min.js") ?>"></script>
-			<script src="<?= $this->assetUrl("vendor/bootstrap/dist/js/bootstrap.min.js") ?>"></script>
-		</footer>
+	<div class="container-fluid">
+		<div class="row footer">
+			<div class="col-md-8">
+				<p class="text-center">Created by Canivez Samuel, Deville Halim, Desramé Thibaut</p>
+			</div>
+			<div class="col-md-2 scrollinside">
+				<?php 
+				require "/../Controller/TwitterController.php";
+				?>
+			</div>
+		</div>
 	</div>
+	
+
+	<script src="<?= $this->assetUrl("vendor/jquery/dist/jquery.min.js") ?>"></script>
+	<script src="<?= $this->assetUrl("vendor/bootstrap/dist/js/bootstrap.min.js") ?>"></script>
 	<script src="<?= $this->assetUrl('js/script.js') ?>"></script>
 </body>
 </html>
-

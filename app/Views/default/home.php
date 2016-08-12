@@ -87,7 +87,8 @@
 </div>
 </div>
 <div id ="contact" class="contact">
-	<div class="container">
+
+  <div class="container">
 	<form class="form-horizontal">
 	  	<div class="form-group">
 	    		<label for="inputNom" class="col-sm-2 control-label">Nom :</label>
@@ -114,6 +115,7 @@
 	    </div>
 	</form>
 	</div>
+
 </div>
 <?php $this->stop('main_content') ?>
 
