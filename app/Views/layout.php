@@ -41,12 +41,15 @@
 		<section  class="text-center">
 			<?= $this->section('main_content') ?>
 		</section>
-	
-		<footer>
+
+	<div class="container">
+	<footer>
 			<p class="text-center navbar-invert">Created by Canivez Samuel, Deville Halim, Desramé Thibaut</p>
 			<script src="<?= $this->assetUrl("vendor/jquery/dist/jquery.min.js") ?>"></script>
 			<script src="<?= $this->assetUrl("vendor/bootstrap/dist/js/bootstrap.min.js") ?>"></script>
 		</footer>
+	</div>
+	<script src="<?= $this->assetUrl('js/script.js') ?>"></script>
 </body>
 </html>
 

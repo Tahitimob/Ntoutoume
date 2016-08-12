@@ -15,5 +15,9 @@
     "test",
     "tests",
     "public/assets/vendor/"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.6.3"
+  }
 }

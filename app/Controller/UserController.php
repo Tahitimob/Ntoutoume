@@ -36,12 +36,12 @@ class UserController extends Controller
 
 	public function create()
 	{
-		if(isset($_SESSION['id'])){
-			$user = new UserModel();
-			$user = $user->find($_SESSION['id']);
-			$this->show('user/create', ['user' => $user]);
-		} else {
-			$this->redirectToRoute('default_home');
-		}
+		// if(isset($_SESSION['id'])){
+		// 	$user = new UserModel();
+		// 	$user = $user->find($_SESSION['id']);
+		$this->show('user/create');
+		// } else {
+		// 	$this->redirectToRoute('default_home');
+		// }
 	}
 }
