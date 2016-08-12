@@ -222,7 +222,7 @@ abstract class Model
 	{
 
 		$colNames = array_keys($data);
-		$colNamesString = implode(', ', '`'.$colNames.'`');
+		$colNamesString = implode(', ', $colNames);
 
 		$sql = 'INSERT INTO ' . $this->table . ' (' . $colNamesString . ') VALUES (';
 		foreach($data as $key => $value){
