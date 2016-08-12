@@ -4,7 +4,7 @@ namespace Utils;
 use \Model\PixelModel ;
 
 class Pixelart {
-	private $chain; //La chaîne de caractère en hexa
+	private $colorstring; //La chaîne de caractère en hexa
 	private $id;
 	private $width = 4;
 	private $height = 4;

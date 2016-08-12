@@ -20,7 +20,7 @@
 	        <span class="icon-bar"></span>
 	      </button>
 	      <a class="navbar-brand" href="<?= $this->url('default_home') ?>">
-			<img class="brandStyle" alt="Logo pix'hell" src="assets/img/logo50px.png">
+			<img class="brandStyle" alt="Logo pix'hell" src="<?= $this->assetUrl('img/logo50px.png')?>">
 	      </a>
 	    </div>
 
