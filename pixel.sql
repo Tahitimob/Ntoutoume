@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 10 Août 2016 à 15:04
+-- Généré le :  Ven 12 Août 2016 à 12:27
 -- Version du serveur :  5.7.9
 -- Version de PHP :  7.0.0
 
@@ -31,11 +31,13 @@ CREATE TABLE IF NOT EXISTS `pixelart` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `idUser` int(11) NOT NULL,
   `colorstring` text NOT NULL,
-  `url` varchar(255) NOT NULL,
+  `width` int(11) NOT NULL,
+  `height` int(11) NOT NULL,
+  `url` varchar(255) DEFAULT NULL,
   `dateCreated` date NOT NULL,
   PRIMARY KEY (`id`),
   KEY `idUser` (`idUser`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
