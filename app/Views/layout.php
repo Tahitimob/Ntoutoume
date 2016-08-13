@@ -28,6 +28,7 @@
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav navbar-right">
 	        <li><a href="<?= $this->url('default_home') ?>">Accueil</a></li>
+	        <!--Faire l'affichage du menu en fonction de l'état de connexion du client-->
 			<li><a href="<?= $this->url('user_inscription') ?>">Inscription</a></li>
 			<li><a href="<?= $this->url('security_login') ?>">Login</a></li>
 			<li><a href="<?= $this->url('pixel_create') ?>">Création</a></li>
