@@ -6,8 +6,8 @@ use \Model\PixelModel ;
 class Pixelart {
 	private $colorstring = ""; //La chaîne de caractère en hexa
 	private $id;
-	private $width = 4;
-	private $height = 4;
+	private $width = 20;
+	private $height = 20;
 	private $data = array();
 	private $dateCreated;
 
@@ -68,13 +68,20 @@ class Pixelart {
 
 	public function create()
 	{
+		$width = 400 / $this->getWidth();
+		/*if($this->getWidth() >= $this->getHeight()){
+			$bloc = "<div style='width: ".($width*$this->getWidth())."px; height:400px;'>";
+		} else {
+			$bloc = "<div style='width: 400px; height:".($width*$this->getHeight())."px;'>";
+		}*/
 		$bloc = "<div style='width: 400px; height:400px;'>";
 		$array = explode(';', $this->getString());
 		$z = 0;
-		for($i = 0; $i < 4; $i++){
-			for($j = 0; $j < 4; $j++){
+		
+		for($i = 0; $i < $this->getHeight(); $i++){
+			for($j = 0; $j < $this->getWidth(); $j++){
 				$rgb = $array[$z];
-				$bloc .= "<div class='case' style='width:100px; height:100px; float: left; background-color:".$rgb."; border:1px ridge black; box-sizing: border-box '></div>";
+				$bloc .= "<div class='case' style='width:".$width."px; height:".$width."px; float: left; background-color:".$rgb."; border:1px ridge black; box-sizing: border-box '></div>";
 				$z++;
 			}
 		}
