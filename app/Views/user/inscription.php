@@ -30,7 +30,6 @@
 	</div>
 	<div class="wrap">
 		<div id="b"></div>
-		<div class="vertical-line"></div>
 	</div>
 </div>
 <?php $this->stop('main_content') ?>
