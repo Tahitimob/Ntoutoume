@@ -50,15 +50,17 @@
 			</div>
 			<div class="col-md-2 scrollinside">
 				<?php 
-				require "/../Controller/TwitterController.php";
+				//require "/../Controller/TwitterController.php";
 				?>
 			</div>
 		</div>
 	</div>
 	
-
+	<footer>
+	</footer>
 	<script src="<?= $this->assetUrl("vendor/jquery/dist/jquery.min.js") ?>"></script>
 	<script src="<?= $this->assetUrl("vendor/bootstrap/dist/js/bootstrap.min.js") ?>"></script>
 	<script src="<?= $this->assetUrl('js/script.js') ?>"></script>
+	<?= $this->section('add_js') ?>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<?php $this->layout('layout', ['title' => "Create - Pix'Hell"]) ?>
+<?php $this->layout('layout', ['title' => "Edition - Pix'Hell"]) ?>
 
 <?php $this->start('main_content') ?>
 <style>

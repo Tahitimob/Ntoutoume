@@ -5,6 +5,7 @@ namespace Controller;
 use \W\Controller\Controller;
 use \Model\UserModel;
 use \Model\PixelModel;
+use \Utils\Pixelart;
 
 class PixelController extends Controller
 {
@@ -13,19 +14,17 @@ class PixelController extends Controller
 		// if(isset($_SESSION['id'])){
 		// 	$user = new UserModel();
 		// 	$user = $user->find($_SESSION['id']);
-		$pixelArt = new \Utils\Pixelart();
+		$pixelart = new \Utils\Pixelart();
 		if(isset($_POST['colors'])){
-
-			
-			if($pixelArt->verifHexa($_POST['colors']) && $pixelArt->verifLength($_POST['colors'])){
+			if($pixelart->verifHexa($_POST['colors']) && $pixelart->verifLength($_POST['colors'])){
 				//echo "Ok";  //Test unitaire
-				$pixelArt->arrayToString($_POST['colors']);
-				$pixelArt->setData(1); 
+				
+				$pixelart->arrayToString($_POST['colors']);
+				$pixelart->setData(1); 
 				$pixelModel = new PixelModel();
 				$pixelModel->setTable('pixelart');
-				//var_dump($pixelModel->insert($pixelArt->getData())); 
-				$pixel = $pixelModel->insert($pixelArt->getData());
-				var_dump($pixel);
+				//var_dump($pixelModel->insert($pixelart->getData())); 
+				$pixel = $pixelModel->insert($pixelart->getData());
 				//$insertId = $pixelModel->lastInsertId();
 				//var_dump($insertId);
 				if(isset($pixel['id'])){
@@ -35,9 +34,8 @@ class PixelController extends Controller
 					$this->redirectToRoute('pixel_create_image', ['id' => $pixel['id']]);
 				} 
 			}
-
 		}
-		$this->show('pixel/create', ['pixel' => $pixelArt]);
+		$this->show('pixel/create', ['pixel' => $pixelart]);
 		// } else {
 		// 	$this->redirectToRoute('default_home');
 		// }
@@ -72,7 +70,7 @@ class PixelController extends Controller
 			}
 			imagepng($image, "assets/img/pixelart/".$pixel['url']);
 			imagedestroy($image);
-			$this->redirectToRoute('pixel_edit');
+			$this->redirectToRoute('pixel_edit', ['id' => $pixel['id']]);
 		} else {
 			$this->redirectToRoute('pixel_create');
 		}
@@ -81,7 +79,24 @@ class PixelController extends Controller
 	public function edit($id)
 	{
 		$pixelModel = new PixelModel();
-		
+		$pixelModel->setTable('pixelart');
+		$pixel = $pixelModel->find($id);
+		if(isset($pixel['id'])){
+			$pixelart = new Pixelart($id);
+			if(isset($_POST['colors']) && $pixelart->verifHexa($_POST['colors']) && $pixelart->verifLength($_POST['colors'])){
+				$pixelart->arrayToString($_POST['colors']);
+				$pixelart->setData(1);
+				$pixel = $pixelModel->update($pixelart->getData(), $id);
+				$this->redirectToRoute('pixel_create_image', ['id' => $pixel['id']]);
+			}
+
+			$this->show('pixel/edit', ['pixel' => $pixelart]);
+
+		} else {
+			$this->redirectToRoute('pixel_create');
+		}
 	}
+
+
 
 }

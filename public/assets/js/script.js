@@ -15,4 +15,17 @@ $(function(){
 			i++;
 		})
 	})
+	$('body').on('click', '.case', function(){
+	   	console.log('Ok');
+		   	 
+		/*var couleur ="rgb("
+	   	 	+ (Math.floor(Math.random() * 256)) + ","
+			+ (Math.floor(Math.random() * 256)) + ","
+			+ (Math.floor(Math.random() * 256))
+				+")";*/
+		var couleur = $('.jscolor').css('background-color');
+		$(this).css( "background-color", couleur);
+		console.log(couleur);	 	
+		}
+	);
 })
