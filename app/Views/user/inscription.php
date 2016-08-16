@@ -11,6 +11,9 @@
 			<label for="username">Nom d'utilisateur :</label>
 			<input type="text" class="form-control" name="username" placeholder="Nom d'utilisateur">
 
+			<label for="email">Email :</label>
+			<input type="email" class="form-control" name="email" placeholder="Nom d'utilisateur">
+
 			<label for="password">Password :</label>
 			<input type="password" class="form-control" name="password" placeholder="Mot de passe">
 

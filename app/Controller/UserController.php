@@ -4,6 +4,8 @@ namespace Controller;
 
 use \W\Controller\Controller;
 use \Model\UserModel;
+use \W\Security\AuthentificationModel as Auth;
+
 class UserController extends Controller
 {
 	public function list()
@@ -21,6 +23,22 @@ class UserController extends Controller
 
 
 	public function inscription(){
+		if (isset($_POST['register'])) {
+			$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+			$table_user = array('username' => $_POST['username'], 'email' => $_POST['email'], 'password' => $password, 'role' => 'user');
+			$user = new UserModel();
+			$user->setTable('users');
+			$User1 = $user->insert($table_user);
+			if (!empty($User1)) {
+				$auth = new Auth();
+				$auth->logUserIn($User1);
+				$this->redirectToRoute('default_home');
+			}else{
+				$this->show('user/inscription', ['error' => "L'inscription a échoué"]);
+			}
+			
+
+		}
 		$this->show('user/inscription');
 	}
 

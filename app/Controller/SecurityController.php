@@ -11,14 +11,14 @@ class SecurityController extends Controller
 
 	public function login()
 	{
-		if(isset($_POST['connect'])){
+		if(isset($_POST['security_login'])){
 			$auth = new Auth();
 			$userCheck = $auth->isValidLoginInfo($_POST['username'], $_POST['password']);
 			if($userCheck){
 				$user = new UserModel();
 				$user = $user->find($userCheck);
 				$auth->logUserIn($user);
-				$this->redirectToRoute('user_view', ['slug' => $user['username']]);
+				$this->redirectToRoute('default_home');
 			}
 		}
 		$this->show('security/login');
