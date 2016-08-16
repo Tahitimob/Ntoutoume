@@ -38,6 +38,8 @@
 			<br>
 			<li><a href="<?= $this->url('pixel_create') ?>">¬Création</a></li>
 			<br>
+			<li><a href="<?= $this->url('user_show') ?>">Profil</a></li>
+			<br>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	    <div class="contact" id="contact">
