@@ -1,7 +1,16 @@
+/***************************************************/
+/****************** ASSETS ************************/
+
 body {
-	background-color: white;
-	padding-top:70px;
+	background-color: #2c3e50;
+	
 }
+
+.mef {
+	padding-left: 5%;
+}
+
+
 
 /************************************************************************************************/
 /********************************************LAYOUT**********************************************/
@@ -11,34 +20,60 @@ body {
 /******************* NAVBAR *********************/
 /************************************************/
 
+.navbar-fixed-left {
+	position: fixed;
+	width: 150px;
+	height: 100%;
+	background-color: #34495e;
+	border:0;
+	border-radius:0;
+	z-index: 9;
+
+}
+.navbar-default .navbar-nav>li>a {
+	color:#7f8c8d;
+	font-family: 'Orbitron', sans-serif;
+	font-size: 1.2em;
+
+}
 .navbar-brand {
 	padding:0;
 }
 
-.brandStyle {
-	padding-left: 15px;
+.item-position {
+	margin-top: 250%;
+	margin-left: -20%;
+	
+}
+
+/******************* CONTACT ********************/
+/************************************************/
+
+.btn-contact {
+	border: 2px solid #7f8c8d;
+	background-color: #34495e;
+	color:#7f8c8d;
+	position: relative;
+	top:300px;
+	font-family: 'Orbitron', sans-serif;
+}
+
+.btn-contact:hover {
+	border-color: #34495e;
+	background-color: #7f8c8d;
+	color:#34495e;
 }
 
 /************************************************/
 /******************* FOOTER *********************/
 /************************************************/
 
-.footer {
-	
-	background-color: #333;
-	color: grey;
-	position: relative;
-	margin-bottom: 20px;
-}
-.footer p {
-	padding-top: 16px;
-}
 
-.scrollinside {
+/*.scrollinside {
 	width:265px;
 	height:265px;
 	overflow:auto;
-}
+}*/
 
 
 /************************************************************************************************/
@@ -50,37 +85,47 @@ body {
 /********************************************PAGE ACCUEIL****************************************/
 /************************************************************************************************/
 
-/************************************************/
-/******************* JUMBO **********************/
-/************************************************/
+.title {
+	margin-top: 10%;
+	font-family: 'Orbitron', sans-serif;
+	color:#7f8c8d;
+	font-size: 8em;
 
-#home {
+}
+
+/*****************LINES********************************/
+.hr {
 	width: 100%;
-	margin-bottom: 6%;
-}
-
-.jumbotron {
-	background-color: white;
+	border-top:3px solid #7f8c8d;
 }
 
 /************************************************/
-/******************* THUMB **********************/
-/************************************************/
+@keyframes godown {
+    0%   {
+    	transform: translate(0, 0);
+    }
+    50% {
+    	transform: translate(0, 15px);
+    }
+    100% {
+    	transform: translate(0, 0);
+    }
+}
+.godown p {
 
-#thumb {
-	border-top: 2px solid black;
-	background-color: #E4F1FE;
-	margin-top: 5%;
+	font-size: 6em;
+	text-decoration: none;
+	color:#7f8c8d;
+	animation-name: godown;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	transition:all 0.7s ease;
+	-webkit-transition: all 0.7s ease;
+	-moz-transition: all 0.7s ease;
+	-o-transition: all 0.7s ease;
 }
 
-/************************************************/
-/******************* CONTACT ********************/
-/************************************************/
 
-#contact {
-	padding-top: 50px;
-	padding-bottom: 50px;
-}
 
 /************************************************************************************************/
 /********************************************FIN PAGE ACCUEIL************************************/
@@ -90,3 +135,27 @@ body {
 /********************************************INSCRIPTION*****************************************/
 /************************************************************************************************/
 
+#inscription {
+	padding-top: 10%;
+	color:#7f8c8d;
+	z-index: 2;
+}
+
+.wrap {
+	position: absolute;
+}
+ #b {
+ position: relative;
+ z-index:0;
+ border:118px solid;
+ border-top-width:177px;
+ border-color:transparent;
+ border-left-color:#7f8c8d;
+ } 
+
+ .vertical-line {
+ 	position:relative;
+ 	z-index: 0;
+ 	left:10%;
+	background-image: url('img/vertical-line.png');
+ }
