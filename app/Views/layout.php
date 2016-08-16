@@ -38,23 +38,23 @@
 			<br>
 			<li><a href="<?= $this->url('pixel_create') ?>">¬Création</a></li>
 			<br>
-			<li><a href="<?= $this->url('user_show') ?>">Profil</a></li>
+			<li><a href="<?= $this->url('user_show') ?>">¬Profil</a></li>
 			<br>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	    <div class="contact" id="contact">
 	    	<!-- Button trigger modal -->
-		<button type="button" class="btn btn-primary btn-lg btn-contact" data-toggle="modal" data-target="#myModal">
+		<button type="button" class="btn btn-primary btn-lg btn-contact" data-toggle="modal" data-target="#modal-contact">
 		Contact
 		</button>
 
 		<!-- Modal -->
-			<div class="modal" id="myModal" tabindex="1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal" id="modal-contact" tabindex="1" role="dialog" aria-labelledby="myModalContact">
 			  <div class="modal-dialog" role="document">
 			    <div class="modal-content">
 			      <div class="modal-header">
 			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			        <h4 class="modal-title" id="myModalLabel">Contact</h4>
+			        <h4 class="modal-title" id="myModalContact">Contact</h4>
 			      </div>
 			      <div class="modal-body">
 			          <div class="container">
@@ -77,13 +77,14 @@
 					      			<input type="email" class="form-control" id="inputMail" placeholder="Email">
 					    		</div>
 					  		</div>
-						</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Envoyer</button>
+					</div>
 			      </div> <!-- end of modal body -->
-			      <div class="modal-footer">
-			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			        <button type="button" class="btn btn-primary">Envoyer</button>
-			      </div>
-			  		</form>
+			
 			    </div>
 			  </div>
 			</div>

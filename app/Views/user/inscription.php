@@ -14,7 +14,7 @@
 			</div>
 			<div class="form-group">
 				<label for="email">Email :</label>
-				<input type="email" class="form-control" name="password" placeholder="Mot de passe" id="email">
+				<input type="email" class="form-control" name="password" placeholder="Email" id="email">
 			</div>
 			<div class="form-group">
 				<label for="password">Password :</label>
@@ -22,7 +22,7 @@
 			</div>
 			<div class="form-group">
 				<label for="cf-password">Confirmation password :</label>
-				<input type="password" class="form-control" name="cf-password" placeholder="Mot de passe" id="cf-password">
+				<input type="password" class="form-control" name="cf-password" placeholder="Confimation du mot de passe" id="cf-password">
 			</div>
 		<button name="register">S'inscire</button>
 		</form>
