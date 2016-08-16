@@ -11,34 +11,34 @@ class PixelController extends Controller
 {
 	public function create()
 	{
-		// if(isset($_SESSION['id'])){
-		// 	$user = new UserModel();
-		// 	$user = $user->find($_SESSION['id']);
-		$pixelart = new \Utils\Pixelart();
-		if(isset($_POST['colors'])){
-			if($pixelart->verifHexa($_POST['colors']) && $pixelart->verifLength($_POST['colors'])){
-				//echo "Ok";  //Test unitaire
-				
-				$pixelart->arrayToString($_POST['colors']);
-				$pixelart->setData(1); 
-				$pixelModel = new PixelModel();
-				$pixelModel->setTable('pixelart');
-				//var_dump($pixelModel->insert($pixelart->getData())); 
-				$pixel = $pixelModel->insert($pixelart->getData());
-				//$insertId = $pixelModel->lastInsertId();
-				//var_dump($insertId);
-				if(isset($pixel['id'])){
-					$url = $pixel['id'].".png";
-					$pixel['url'] = $url;
-					$pixelModel->update($pixel, $pixel['id']);
-					$this->redirectToRoute('pixel_create_image', ['id' => $pixel['id']]);
-				} 
+		if(isset($_SESSION['user']['id'])){
+			$user = new UserModel();
+			$user = $user->find($_SESSION['user']['id']);
+			$pixelart = new \Utils\Pixelart();
+			if(isset($_POST['colors'])){
+				if($pixelart->verifHexa($_POST['colors']) && $pixelart->verifLength($_POST['colors'])){
+					//echo "Ok";  //Test unitaire
+					
+					$pixelart->arrayToString($_POST['colors']);
+					$pixelart->setData($_SESSION['user']['id']); 
+					$pixelModel = new PixelModel();
+					$pixelModel->setTable('pixelart');
+					//var_dump($pixelModel->insert($pixelart->getData())); 
+					$pixel = $pixelModel->insert($pixelart->getData());
+					//$insertId = $pixelModel->lastInsertId();
+					//var_dump($insertId);
+					if(isset($pixel['id'])){
+						$url = $pixel['id'].".png";
+						$pixel['url'] = $url;
+						$pixelModel->update($pixel, $pixel['id']);
+						$this->redirectToRoute('pixel_create_image', ['id' => $pixel['id']]);
+					} 
+				}
 			}
+			$this->show('pixel/create', ['pixel' => $pixelart]);
+		} else {
+			$this->redirectToRoute('default_home');
 		}
-		$this->show('pixel/create', ['pixel' => $pixelart]);
-		// } else {
-		// 	$this->redirectToRoute('default_home');
-		// }
 	}
 
 	public function createImage($id)

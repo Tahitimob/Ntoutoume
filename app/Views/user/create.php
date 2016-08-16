@@ -2,6 +2,10 @@
 
 <?php $this->start('main_content') ?>
 
-<h1>Page de création</h1>
+<div id="creation" class="mef">
+	
+		<h2>A vos souris !</h2>
+	
+</div>
 
 <?php $this->stop('main_content') ?>

@@ -74,7 +74,7 @@ class Pixelart {
 		} else {
 			$bloc = "<div style='width: 400px; height:".($width*$this->getHeight())."px;'>";
 		}*/
-		$bloc = "<div style='width: 400px; height:400px;'>";
+		$bloc = "<div id='wrapper' style='width: 400px; height:400px;'>";
 		$array = explode(';', $this->getString());
 		$z = 0;
 		

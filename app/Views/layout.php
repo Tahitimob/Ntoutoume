@@ -38,7 +38,7 @@
 			<br>
 			<li><a href="<?= $this->url('pixel_create') ?>">¬Création</a></li>
 			<br>
-			<li><a href="<?= $this->url('user_show', ['id' => $_SESSION['user']['id']]) ?>">Profil</a></li>
+			<li><a href="<?= $this->url('user_show', ['id' => $_SESSION['user']['id']]) ?>">¬Profil</a></li>
 			<br>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
@@ -75,6 +75,12 @@
 					    		<label for="inputMail" class="col-sm-2 control-label">Email :</label>
 					    		<div class="col-sm-2">
 					      			<input type="email" class="form-control" id="inputMail" placeholder="Email">
+					    		</div>
+					  		</div>
+					  		<div class="form-group">
+					    		<label for="inputMail" class="col-sm-2 control-label">Votre message :</label>
+					    		<div class="col-sm-2">
+					      			<input type="textarea" class="form-control" id="inputMail" placeholder="Email">
 					    		</div>
 					  		</div>
 						</form>
