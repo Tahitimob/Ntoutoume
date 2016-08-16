@@ -1,13 +1,18 @@
 <?php
 	
 	$w_routes = array(
-		['GET|POST', '/', 'Default#home', 'default_home'],
-		['GET|POST', '/user', 'User#list', 'user_list'],
-		['GET', '/user/[i:id]', "User#affiche", "user_show"],
-		['GET|POST', '/inscription', 'User#inscription', 'user_inscription'],
-		['GET|POST', '/login', 'Security#login', 'security_login'],
-		['GET|POST', '/pixel/create', 'Pixel#create', 'pixel_create'],
-		['GET|POST', '/pixel/create/[i:id]', 'Pixel#createImage', 'pixel_create_image'],
-		['GET|POST', '/pixel/edit/[i:id]', 'Pixel#edit', 'pixel_edit']
+		['GET|POST', '/', 'Default#home', 'default_home'], //page d'accueil
+		
+		['GET|POST', '/user', 'User#list', 'user_list'], //liste des utilisateurs en back office
+		['GET', '/user/[i:id]', "User#affiche", "user_show"], //données d'un utilisateur 
+		['GET|POST', '/user/edit/[i:id]', "User#edit", "user_edit"], //edition de profil
+		['GET|POST', '/user/delete/[i:id]', "User#admin_delete", "user_delete"], //suppression de compte par un admin
+
+		['GET|POST', '/inscription', 'User#inscription', 'user_inscription'], //page d'inscription
+		['GET|POST', '/login', 'Security#login', 'security_login'], //page de connexion
+
+		['GET|POST', '/pixel/create', 'Pixel#create', 'pixel_create'], //page de création de pixel
+		['GET|POST', '/pixel/create/[i:id]', 'Pixel#createImage', 'pixel_create_image'], //transformation en image
+		['GET|POST', '/pixel/edit/[i:id]', 'Pixel#edit', 'pixel_edit'] //édition de pixel
 		
 	);
