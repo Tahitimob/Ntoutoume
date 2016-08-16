@@ -38,7 +38,7 @@
 			<br>
 			<li><a href="<?= $this->url('pixel_create') ?>">¬Création</a></li>
 			<br>
-			<li><a href="<?= $this->url('user_show') ?>">Profil</a></li>
+			<li><a href="<?= $this->url('user_show', ['id' => $_SESSION['user']['id']]) ?>">Profil</a></li>
 			<br>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
