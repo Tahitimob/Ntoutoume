@@ -94,15 +94,15 @@
 	<section  class="text-center">
 		<?= $this->section('main_content') ?>
 	</section>
-
 <?php 
 	// require "/../Controller/TwitterController.php";
 ?>
-	
-	
 
+	<footer>
+	</footer>
 	<script src="<?= $this->assetUrl("vendor/jquery/dist/jquery.min.js") ?>"></script>
 	<script src="<?= $this->assetUrl("vendor/bootstrap/dist/js/bootstrap.min.js") ?>"></script>
 	<script src="<?= $this->assetUrl('js/script.js') ?>"></script>
+	<?= $this->section('add_js') ?>
 </body>
 </html>
