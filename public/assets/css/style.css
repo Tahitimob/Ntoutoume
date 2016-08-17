@@ -121,7 +121,7 @@ body {
 
 .title {
 	margin-top: 10%;
-	font-family: 'Orbitron', sans-serif;
+	font-family: 'Press Start 2P', cursive;
 	color:#7f8c8d;
 	font-size: 8em;
 
@@ -193,9 +193,11 @@ body {
 /************************************************************************************************/
 
 .title-crea {
-	font-family: 'Orbitron', sans-serif;
+	font-family: 'Press Start 2P', cursive;
 	color:#7f8c8d;
-	font-size: 8em;
+	font-size: 5.5em;
+	padding-top: 3%;
+	padding-bottom: 3%;
 }
 
 #wrapper {
