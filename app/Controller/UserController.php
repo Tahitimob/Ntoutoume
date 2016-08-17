@@ -5,6 +5,7 @@ namespace Controller;
 use \W\Controller\Controller;
 use \Model\UserModel;
 use \W\Security\AuthentificationModel as Auth;
+use \Model\PixelModel;
 
 class UserController extends Controller
 {
@@ -15,6 +16,7 @@ class UserController extends Controller
 		$this->allowTo('admin');
 		$user = new UserModel();
 		$users = $user->findAll();
+
 		$this->show('user/list', ['users' => $users]);
 	}
 
@@ -70,7 +72,15 @@ class UserController extends Controller
 		if (isset($_POST['edit'])) {
 			$this->redirectToRoute('user_edit');
 		}
-		$this->show('user/show', ['user' => $user]);
+		if(isset($user['id'])){
+			$pixelModel = new PixelModel();
+			$pixelModel->setTable('pixelart');
+			$pixels = $pixelModel->findAll();
+			$this->show('user/show', ['user' => $user, 'pixels' => $pixels]);
+		} else {
+			$this->redirectToRoute('default_home');
+		}
+		
 	}
 
 

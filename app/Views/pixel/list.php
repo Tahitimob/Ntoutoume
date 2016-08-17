@@ -3,7 +3,7 @@
 <?php $this->start('main_content') ?>
 
 <?php foreach($pixels as $pixel) { ?>
-	<div class="pixelart" style="display:inline-block">
+	<div class="pixelart">
 		<img src="<?= $this->assetUrl('img/pixelart/'); echo $pixel['url'] ?>" alt="pixelart<?= $pixel['id']?>">
 	</div>
 

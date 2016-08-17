@@ -13,7 +13,7 @@
 		</div>
 	<div class="color_picker">
 		<p class="text-color"> < Rectangle color ></p>
-		<input class="jscolor" value="cc66ff">
+		<input class="jscolor" value="000000">
 	</div>
 		<?php
 		echo $pixel->create();
