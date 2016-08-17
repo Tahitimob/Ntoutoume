@@ -9,7 +9,7 @@
 <div id="creation" class="mef">
 	<div class="container">
 		<div class="title-crea">
-			<p>A vos souris !</p>
+			<p>A VOS SOURIS!</p>
 		</div>
 
 		<div class="container">
@@ -27,16 +27,19 @@
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
-              <div class="modal-header">
+              <div class="modal-header modal-style">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                <h4 class="modal-title" id="myModalLabel">Quelques astuces</h4>
               </div>
-              <div class="modal-body">
-                ...
+              <div class="modal-body modal-style">
+                <div>
+                  <p>¬ Pour colorier en série les carrés blancs, il faut rester appuyer sur < A ></p>
+                  <br>
+                  <p>¬ Pour recupérer une couleur déja posée, il faut rester appuyer sur < S ></p>
+                </div>
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+              <div class="modal-footer modal-style">
+                <button type="button" class="btn btn-default btn-contact-modal" data-dismiss="modal">Ok !</button>
               </div>
             </div>
           </div>

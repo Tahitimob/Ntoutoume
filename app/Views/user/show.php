@@ -30,9 +30,6 @@ $this->layout('layout', ['title' => $title]) ?>
       </form>
     </div>
   </div>
-  <div class="wrap">
-    <div id="b"></div>
-  </div>
 
 </div>
 <div id="listpixel">

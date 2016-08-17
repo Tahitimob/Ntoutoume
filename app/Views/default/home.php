@@ -16,7 +16,7 @@
       </a>
     </div>
     <div class="wrapper">
-      
+      <div class="vr">&nbsp;</div>
     </div>
   </div>
   

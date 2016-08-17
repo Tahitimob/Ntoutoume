@@ -9,7 +9,7 @@
 <div id="creation" class="mef">
 	<div class="container">
 		<div class="title-crea">
-			<p>Edition</p>
+			<p>EDITION</p>
 		</div>
 		<div class="container">
   			<div class="col-md-4">

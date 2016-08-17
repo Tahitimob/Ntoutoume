@@ -84,15 +84,15 @@ body {
 }
 
 .modal-style {
-	background-color: #7f8c8d;
+	background-color: #2c3e50;
 	font-family: 'Orbitron', sans-serif;
-	color:#34495e;
+	color:#7f8c8d;
 }
 
 .btn-contact-modal {
-	border: 2px solid #34495e;
+	border: 2px solid #7f8c8d;
 	background-color: transparent;
-	color:#34495e;
+	color:#7f8c8d;
 }
 
 .btn-contact-modal:hover {
@@ -121,7 +121,7 @@ body {
 
 .title {
 	margin-top: 10%;
-	font-family: 'Orbitron', sans-serif;
+	font-family: 'Press Start 2P', cursive;
 	color:#7f8c8d;
 	font-size: 8em;
 
@@ -133,7 +133,17 @@ body {
 	border-top:3px solid #7f8c8d;
 }
 
+.vr {
+    width:3px;
+    background-color:#7f8c8d;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:35%;
+}
 /************************************************/
+
+/* Animation de la fléche page home */
 @keyframes godown {
     0%   {
     	transform: translate(0, 0);
@@ -193,9 +203,11 @@ body {
 /************************************************************************************************/
 
 .title-crea {
-	font-family: 'Orbitron', sans-serif;
+	font-family: 'Press Start 2P', cursive;
 	color:#7f8c8d;
-	font-size: 8em;
+	font-size: 5.5em;
+	padding-top: 3%;
+	padding-bottom: 3%;
 }
 
 #wrapper {
