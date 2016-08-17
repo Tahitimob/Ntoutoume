@@ -21,7 +21,7 @@ $this->layout('layout', ['title' => $title]) ?>
 				        </div>
 			        </tr>
 		        </table>
-		       <input type="submit" name="sauvegarder" value="sauvegarder">
+		       <input type="submit" name="sauvegarder" value="sauvegarder" class="btn-contact">
 		     </form>
 		</div>
   	</div>

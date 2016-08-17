@@ -23,9 +23,11 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="<?= $this->url('default_home') ?>">
-			<img class="brandStyle" alt="Logo pix'hell" src="<?= $this->assetUrl('img/pixhell.png')?>">
-	      </a>
+	      <div class="container">
+	      		<a class="navbar-brand brand-position" href="<?= $this->url('default_home') ?>">
+				<img class="brandStyle" alt="Logo pix'hell" src="<?= $this->assetUrl('img/pixhell.png')?>">
+	      		</a>
+	  		</div>
 	    </div>
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->
@@ -108,7 +110,7 @@
 						</form>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default btn-contact-modal" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-default btn-contact-modal" data-dismiss="modal">Fermer</button>
 						<button type="button" class="btn btn-primary btn-contact-modal">Envoyer</button>
 					</div>
 			      </div> <!-- end of modal body -->

@@ -86,7 +86,7 @@ class PixelController extends Controller
 				$pixelart = new Pixelart($id);
 				if(isset($_POST['colors']) && $pixelart->verifHexa($_POST['colors']) && $pixelart->verifLength($_POST['colors'])){
 					$pixelart->arrayToString($_POST['colors']);
-					$pixelart->setData(1);
+					$pixelart->setData($_SESSION['user']['id']);
 					$pixel = $pixelModel->update($pixelart->getData(), $id);
 					$this->redirectToRoute('pixel_create_image', ['id' => $id]);
 				}
