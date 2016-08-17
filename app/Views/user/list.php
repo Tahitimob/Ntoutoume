@@ -1,9 +1,9 @@
 <?php $this->layout('layout', ['title' => "Utilisateurs - Pix'Hell"]) ?>
 
 <?php $this->start('main_content') ?>
-	<h2>Liste des utilisateurs</h2>
+	<h2 style="color:white;">Liste des utilisateurs</h2>
 	<div class="container">
-		<table class="table table-striped">
+		<table class="table" style="color:white;">
     		<thead>
 	      		<tr>
 	        		<th>#</th>
@@ -23,7 +23,7 @@
 				        	<td>
 				          		<div class="btn-group" role="group">
 				            		<a class="btn btn-default" href="<?= $this->url('user_show', ['id' => $user['id']]) ?>">Voir</a>
-				           			<a class="btn btn-default" href="#">supprimer</a>
+				            		<a class="btn btn-default" href="<?= $this->url('user_delete', ['id' => $user['id']]) ?>">Supprimer</a>
 				          		</div>
 				       		</td>
 				      	</tr>
