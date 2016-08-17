@@ -10,6 +10,7 @@
 
 		['GET|POST', '/inscription', 'User#inscription', 'user_inscription'], //page d'inscription
 		['GET|POST', '/login', 'Security#login', 'security_login'], //page de connexion
+		['GET|POST', '/logout', 'Security#logout', 'security_logout'], //page de deconnexion
 
 		['GET|POST', '/pixel/create', 'Pixel#create', 'pixel_create'], //page de création de pixel
 		['GET|POST', '/pixel/create/[i:id]', 'Pixel#createImage', 'pixel_create_image'], //transformation en image

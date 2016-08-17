@@ -30,17 +30,30 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav item-position">
-	        <li><a href="<?= $this->url('default_home') ?>">¬Accueil</a></li>
+	        <li>
+	        	<a href="<?= $this->url('default_home') ?>">¬Accueil</a>
+	        </li>
 	        <br>
 	        <?php if(isset($_SESSION['user'])){ ?>
-	        <li><a href="<?= $this->url('pixel_create') ?>">¬Création</a></li>
+	        <li>
+	        	<a href="<?= $this->url('pixel_create') ?>">¬Création</a>
+	        </li>
 			<br>
-			<li><a href="<?= $this->url('user_show', ['id' => $_SESSION['user']['id']]) ?>">¬Profil</a></li>
+			<li>
+				<a href="<?= $this->url('user_show', ['id' => $_SESSION['user']['id']]) ?>">¬Profil</a>
+			</li>
+			<li>
+				<a href="<?= $this->url('security_logout') ?>">¬Deconnexion</a>
+			</li>
 			<br>
 			<?php } else { ?>
-			<li><a href="<?= $this->url('user_inscription') ?>">¬Inscription</a></li>
+			<li>
+				<a href="<?= $this->url('user_inscription') ?>">¬Inscription</a>
+			</li>
 			<br>
-			<li><a href="<?= $this->url('security_login') ?>">¬Login</a></li>
+			<li>
+				<a href="<?= $this->url('security_login') ?>">¬Login</a>
+			</li>
 			<br>
 			<?php } ?>
 	      </ul>

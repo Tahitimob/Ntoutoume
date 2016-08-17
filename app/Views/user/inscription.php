@@ -2,7 +2,7 @@
 
 <?php $this->start('main_content') ?>
 
-<div id="inscription" class="mef">
+<div class="mef form">
 	<div class="container">
 	<h2 class="text-color">Inscrivez-vous dès maintenant</h2>
 	<div class="form-group col-md-6 col-md-offset-3">

@@ -25,8 +25,11 @@ class SecurityController extends Controller
 	}
 
 	public function logout(){
-		$auth = new Auth();
-		$auth->logUserOut();
-		$this->redirectToRoute('default_home');
+		if (isset($_POST['security_logout'])) {
+			$auth = new Auth();
+			$auth->logUserOut();
+			$this->redirectToRoute('default_home');
+		}
+		$this->show('security/logout');
 	}
 }

@@ -37,15 +37,10 @@ class UserController extends Controller
 			}else{
 				$email = $_POST['email'];
 			}
-			if ($role = $_POST['role'] == "") {
-				$role = $user['role'];
-			}else{
-				$role = $_POST['role'];
-			}
-			$table_user = array('username' => $username, 'email' => $email, 'role' => $role);
+			$table_user = array('username' => $username, 'email' => $email);
 			$user = new UserModel();
 			$user->setTable('users');
-			$NewUser = $user->update($table_user);
+			$NewUser = $user->update($table_user, $id);
 			if (!empty($NewUser)) {
 				$this->redirectToRoute('user_show');
 			}else{
@@ -62,6 +57,16 @@ class UserController extends Controller
 		$this->allowTo('admin');
 		$user = new UserModel();
 		$user = $user->find($id);
+		if (isset($_POST['delete'])) {
+			$user = new UserModel();
+			$user->setTable('users');
+			$NewUser = $user->delete($id);
+			if (!empty($NewUser)) {
+				$this->redirectToRoute('user_show');
+			}else{
+				$this->show('user/delete/[i:id]', ['error' => "La suppression a échouée"]);//delete win mais fail redirect
+			}
+		}
 		$this->show('user/delete', ['user' => $user]);
 	}
 
