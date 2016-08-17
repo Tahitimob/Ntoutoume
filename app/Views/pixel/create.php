@@ -14,14 +14,36 @@
 
 		<div class="container">
   			<div class="col-md-4">
-  				<div class="color_picker">
-					<p class="text-color"> < Rectangle color ></p>
-					<input class="jscolor" value="000000">
-				</div>
+  				 <div class="color_picker">
+					 <p class="text-color"> < Rectangle color ></p>
+					 <input class="jscolor" value="000000">
+				  </div>
   			</div>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary btn-lg btn-crud" data-toggle="modal" data-target="#myModal">
+          Comment faire ?
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div> 
   		</div>
   			<div class="col-md-4 wrap-color">
-  				<p class="text-color placement"> < Couleurs Prédéfini > </p>
+  				<p class="text-color placement"> < Couleurs Prédéfinies > </p>
   				<div class="row box-placement">
   					<p class="text-color title-color-placement">Rouge</p>
   					<div class="col-md-2 box red1"></div>
@@ -82,7 +104,7 @@
 			 <br>
 			</div>
 		<form method="POST">
-			<button class="submit btn-create">Créer</button>
+			<button class="submit btn-create"><h4>Créer</h4></button>
 		</form>	
 	</div>
 </div>
