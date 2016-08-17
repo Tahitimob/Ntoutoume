@@ -10,6 +10,7 @@
 
 	<!-- Google Font -->
 	<link href='https://fonts.googleapis.com/css?family=Orbitron:400,900' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-left">

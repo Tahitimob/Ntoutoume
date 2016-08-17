@@ -177,9 +177,14 @@ body {
 /********************************************CREATION********************************************/
 /************************************************************************************************/
 
+.title-crea {
+	font-family: 'Orbitron', sans-serif;
+	color:#7f8c8d;
+	font-size: 8em;
+}
 
 #wrapper {
-	margin-left:33%;
+	margin-left:55%;
 	
 }
 
@@ -188,6 +193,161 @@ body {
 	color:#7f8c8d;
 }
 
+.btn-create {
+	border: 2px solid #7f8c8d;
+	background-color: #34495e;
+	color:#7f8c8d;
+	font-family: 'Press Start 2P', cursive;
+	padding: 10px;
+	margin-right: 15%;
+}
+
+
+/**** BOX ****/
+
+.color_picker {
+	margin-left: -55%;
+	margin-bottom: 25%;
+}
+
+.wrap-color {
+	margin-right: 50px;
+}
+
+.placement {
+	padding-right: 47%
+}
+
+.title-color-placement {
+	padding-right: 28%;
+}
+
+.box-placement {
+	margin-left: -17%;
+}
+
+.box {
+	width: 50px;
+	height: 50px;
+	border:1px solid black;
+}
+
+/***** BOX COLOR *****/
+
+/*RED*/
+
+.red1{
+	background-color: #990000;
+}
+.red2{
+	background-color: #cc0000;
+}
+.red3{
+	background-color: #ff0000;
+}
+.red4{
+	background-color: #ff4c4c;
+}
+.red5{
+	background-color: #ff7f7f;
+}
+.red6{
+	background-color: #ffb2b2;
+}
+
+/*BLUE*/
+
+.blue1{
+	background-color:#003066;
+}
+.blue2{
+	background-color:#0054b2;
+}
+.blue3{
+	background-color:#0078ff;
+}
+.blue4{
+	background-color:#3293ff;
+}
+.blue5{
+	background-color:#7fbbff;
+}
+.blue6{
+	background-color:#b2d6ff;
+}
+
+/*VERT*/
+
+.green1 {
+	background-color:#0f4526;
+}
+.green2 {
+	background-color:#1b7943;
+}
+.green3 {
+	background-color:#239c56;
+}
+.green4 {
+	background-color:#3cb66f
+;
+}
+.green5 {
+	background-color:#7dce9f;
+}
+.green6 {
+	background-color:#bee6cf;
+}
+
+/*JAUNE*/
+
+.yellow1{
+	background-color:#604e06;
+}
+.yellow2{
+	background-color:#a8890a;
+}
+.yellow3{
+	background-color:#f1c40f;
+}
+.yellow4{
+	background-color:#f3cf3e;
+}
+.yellow5{
+	background-color:#f6db6f;
+}
+.yellow6{
+	background-color:#faedb7;
+}
+
+/*BLACK*/
+
+.black1 {
+	background-color:#0d0d0c;
+}
+.black2 {
+	background-color:#282827;
+}
+.black3 {
+	background-color:#70706f;
+}
+.black4 {
+	background-color:#b7b7b7;
+}
+
+/*BLANC*/
+
+.white1 {
+	background-color:#999998;
+}
+.white2 {
+	background-color:#cccccb;
+}
+.white3 {
+	background-color:#e5e5e4;
+}
+.white4 {
+	background-color:#fffffe;
+}
 /************************************************************************************************/
 /*****************************************LISTE PIXEL ARTS***************************************/
 /************************************************************************************************/
