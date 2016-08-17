@@ -133,7 +133,17 @@ body {
 	border-top:3px solid #7f8c8d;
 }
 
+.vr {
+    width:3px;
+    background-color:#7f8c8d;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:35%;
+}
 /************************************************/
+
+/* Animation de la fléche page home */
 @keyframes godown {
     0%   {
     	transform: translate(0, 0);
