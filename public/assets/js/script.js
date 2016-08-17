@@ -16,6 +16,7 @@ $(function(){
 		})
 	})
 	var hover = false;
+	var picker = false;
 	$('body').on('mousedown', '.case', function(){
 	   	console.log('Ok');
 		   	 
@@ -24,24 +25,44 @@ $(function(){
 			+ (Math.floor(Math.random() * 256)) + ","
 			+ (Math.floor(Math.random() * 256))
 				+")";*/
-		var couleur = $('.jscolor').css('background-color');
-		$(this).css( "background-color", couleur);
-		console.log(couleur);	 	
-	}).on('keydown', function(e){
+		if(picker){
+			var couleur = $(this).css('background-color');
+			$('.jscolor').css( "background-color", couleur);
+			console.log(couleur);
+		}
+		else {
+			var couleur = $('.jscolor').css('background-color');
+			$(this).css( "background-color", couleur);
+			console.log(couleur);	 	
+		}
+	})
+	.on('keydown', function(e){
 		if(e.keyCode == 65){
 			hover = true;
 			console.log(hover);
+		} else if(e.keyCode == 83){
+			hover = false;
+			picker = true;
 		}
-	}).on('keyup', function(e){
+	})
+	.on('keyup', function(e){
 		if(e.keyCode == 65){
 			hover = false;
 			console.log(hover);
+		} else if(e.keyCode == 83){
+			picker = false;
 		}
-	}).on('mouseover', '.case', function(){
+	})
+	.on('mouseover', '.case', function(){
 		if(hover){
 			var couleur = $('.jscolor').css('background-color');
 			$(this).css( "background-color", couleur);
 			console.log(couleur);
 		}
+	})
+	.on('mousedown', '.box', function(){
+		var couleur = $(this).css('background-color');
+		$('.jscolor').css( "background-color", couleur);
+		console.log(couleur);
 	})
 })
