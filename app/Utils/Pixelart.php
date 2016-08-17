@@ -6,8 +6,8 @@ use \Model\PixelModel ;
 class Pixelart {
 	private $colorstring = ""; //La chaîne de caractère en hexa
 	private $id;
-	private $width = 20;
-	private $height = 20;
+	private $width = 10;
+	//private $height = 4;
 	private $data = array();
 	private $dateCreated;
 
@@ -33,7 +33,7 @@ class Pixelart {
 
 	public function setBlank(){
 		$this->colorstring = "";
-		for($i = 0; $i < $this->height; $i++){
+		for($i = 0; $i < $this->width; $i++){
 			for($j = 0; $j < $this->width; $j++){
 				$this->colorstring .= "#FFFFFF;";
 			}
@@ -41,7 +41,7 @@ class Pixelart {
 	}
 
 	public function verifLength($array){
-		if(count($array) == $this->getWidth()* $this->getHeight()){
+		if(count($array) == $this->getWidth()* $this->getWidth()){
 			//echo "Bon"; //Test unitaire
 			return true;
 		}
@@ -78,7 +78,7 @@ class Pixelart {
 		$array = explode(';', $this->getString());
 		$z = 0;
 		
-		for($i = 0; $i < $this->getHeight(); $i++){
+		for($i = 0; $i < $this->getWidth(); $i++){
 			for($j = 0; $j < $this->getWidth(); $j++){
 				$rgb = $array[$z];
 				$bloc .= "<div class='case' style='width:".$width."px; height:".$width."px; float: left; background-color:".$rgb."; border:1px ridge black; box-sizing: border-box '></div>";
@@ -99,6 +99,7 @@ class Pixelart {
 		$this->width = $width;
 	}
 
+	/* Obsolète pour le moment
 	public function getHeight()
 	{
 		return $this->height;
@@ -108,7 +109,7 @@ class Pixelart {
 	{
 		$this->height = $height;
 	}
-
+	*/
 	public function getString(){
 		return $this->colorstring;
 	}
@@ -133,7 +134,7 @@ class Pixelart {
 		$this->data['idUser'] = $idUser;
 		$this->data['colorstring'] = $this->getString();
 		$this->data['width'] = $this->getWidth();
-		$this->data['height'] = $this->getHeight();
+		$this->data['height'] = $this->getWidth();
 		$this->data['dateCreated'] = $this->getDateC();
 	}
 	public function getData()

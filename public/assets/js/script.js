@@ -15,7 +15,8 @@ $(function(){
 			i++;
 		})
 	})
-	$('body').on('click', '.case', function(){
+	var hover = false;
+	$('body').on('mousedown', '.case', function(){
 	   	console.log('Ok');
 		   	 
 		/*var couleur ="rgb("
@@ -26,6 +27,21 @@ $(function(){
 		var couleur = $('.jscolor').css('background-color');
 		$(this).css( "background-color", couleur);
 		console.log(couleur);	 	
+	}).on('keydown', function(e){
+		if(e.keyCode == 65){
+			hover = true;
+			console.log(hover);
 		}
-	);
+	}).on('keyup', function(e){
+		if(e.keyCode == 65){
+			hover = false;
+			console.log(hover);
+		}
+	}).on('mouseover', '.case', function(){
+		if(hover){
+			var couleur = $('.jscolor').css('background-color');
+			$(this).css( "background-color", couleur);
+			console.log(couleur);
+		}
+	})
 })
