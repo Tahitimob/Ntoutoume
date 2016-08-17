@@ -2,28 +2,32 @@
 $this->layout('layout', ['title' => $title]) ?>
 
 <?php $this->start('main_content') ?>
-	<div class="container">
-		<table class="table table-striped">
-			<div class="row">
-				<tr>
-					<td><?= $user['username']?></td>
-					<td><input type="text" name="username" placeholder="New Username"></td>
-				</tr>
-			</div>
-			<div class="row">
-				<tr>
-					<td><?= $user['email']?></td>
-					<td><input type="text" name="email" placeholder="New Email"></td>
-				</tr>
-			</div>
-			<div class="row">
-				<tr>
-					<td><?= $user['role']?></td>
-					<td><input type="text" name="role" placeholder="New Role"></td>
-				</tr>
-			</div>						
-		</table>
-		<input type="submit" name="sauvegarder" value="sauvegarder">
-	</div>
+<div class="mef form">
+  	<div class="container">
+	    <h2 class="text-color">Votre profil</h2>
+	    <div class="form-group col-md-6 col-md-offset-3">
+		    <form action="<?= $this->url('user_edit', ['id' => $_SESSION['user']['id']]) ?>" method="POST">
+				<table class="table">
+					<tr>
+				        <div class="form-group">
+				    	    <td><label><?= $user['username']?></label></td>
+				          	<td><input type="text" name="username" placeholder="New Username"></td>
+				        </div>
+			        </tr>
+			        <tr>
+				        <div class="form-group">
+				        	<td><label><?= $user['email']?></label></td>
+				          	<td><input type="text" name="email" placeholder="New Email"></td>
+				        </div>
+			        </tr>
+		        </table>
+		       <input type="submit" name="sauvegarder" value="sauvegarder">
+		     </form>
+		</div>
+  	</div>
+  	<div class="wrap">
+    	<div id="b"></div>
+  	</div>
+</div>
 	
 <?php $this->stop('main_content') ?>
