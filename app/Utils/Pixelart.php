@@ -22,7 +22,6 @@ class Pixelart {
 				$this->setString( $pixel['colorstring']);
 				$this->setDateC($pixel['dateCreated']);
 				$this->setWidth($pixel['width']);
-				$this->setHeight($pixel['height']);
 			} else {
 				$this->setBlank();
 			}

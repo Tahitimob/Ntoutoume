@@ -37,7 +37,7 @@ class PixelController extends Controller
 			}
 			$this->show('pixel/create', ['pixel' => $pixelart]);
 		} else {
-			$this->redirectToRoute('default_home');
+			$this->redirectToRoute('user_inscription');
 		}
 	}
 
@@ -47,7 +47,7 @@ class PixelController extends Controller
 		$pixelModel->setTable('pixelart');
 		$pixel = $pixelModel->find($id);
 		if($pixel['id']){
-			$x = (500 / $pixel['width'])*$pixel['width'] ;
+			$x = (400 / $pixel['width'])*$pixel['width'] ;
 			//$y = ; Pour une futur utilisation avec des pixelart non carrés
 			$taille_cube = $x / $pixel['width'];
 			$image = imagecreate($x,$x);
@@ -78,25 +78,35 @@ class PixelController extends Controller
 	
 	public function edit($id)
 	{
-		$pixelModel = new PixelModel();
-		$pixelModel->setTable('pixelart');
-		$pixel = $pixelModel->find($id);
-		if(isset($pixel['id'])){
-			$pixelart = new Pixelart($id);
-			if(isset($_POST['colors']) && $pixelart->verifHexa($_POST['colors']) && $pixelart->verifLength($_POST['colors'])){
-				$pixelart->arrayToString($_POST['colors']);
-				$pixelart->setData(1);
-				$pixel = $pixelModel->update($pixelart->getData(), $id);
-				$this->redirectToRoute('pixel_create_image', ['id' => $id]);
+		if(isset($_SESSION['user'])){
+			$pixelModel = new PixelModel();
+			$pixelModel->setTable('pixelart');
+			$pixel = $pixelModel->find($id);
+			if(isset($pixel['id']) && $pixel['idUser'] == $_SESSION['user']['id']){
+				$pixelart = new Pixelart($id);
+				if(isset($_POST['colors']) && $pixelart->verifHexa($_POST['colors']) && $pixelart->verifLength($_POST['colors'])){
+					$pixelart->arrayToString($_POST['colors']);
+					$pixelart->setData(1);
+					$pixel = $pixelModel->update($pixelart->getData(), $id);
+					$this->redirectToRoute('pixel_create_image', ['id' => $id]);
+				}
+
+				$this->show('pixel/edit', ['pixel' => $pixelart]);
+
+			} else {
+				$this->redirectToRoute('pixel_create');
 			}
-
-			$this->show('pixel/edit', ['pixel' => $pixelart]);
-
 		} else {
-			$this->redirectToRoute('pixel_create');
+			$this->redirectToRoute('user_inscription');
 		}
 	}
 
-
+	public function list()
+	{
+		$pixelModel = new PixelModel();
+		$pixelModel->setTable('pixelart');
+		$pixels = $pixelModel->findAll();
+		$this->show('pixel/list', ['pixels' =>$pixels]);
+	}
 
 }
