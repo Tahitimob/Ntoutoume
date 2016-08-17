@@ -12,7 +12,7 @@
 			<p>Edition</p>
 		</div>
 	<div class="color_picker">
-		<p class="text-color"> < Rectangle color  ></p>
+		<p class="text-color"> < Rectangle color ></p>
 		<input class="jscolor" value="cc66ff">
 	</div>
 		<?php

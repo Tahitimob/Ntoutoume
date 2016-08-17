@@ -12,7 +12,7 @@
 			<p>A vos souris !</p>
 		</div>
 		<div class="color_picker">
-			<p class="text-color"> < Rectangle color  ></p>
+			<p class="text-color"> < Rectangle color ></p>
 			<input class="jscolor" value="000000">
 		</div>
 		<br>
