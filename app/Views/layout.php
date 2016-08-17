@@ -35,6 +35,11 @@
 	        	<a href="<?= $this->url('default_home') ?>">¬Accueil</a>
 	        </li>
 	        <br>
+	        <?php if(isset($_SESSION['user']) && ($_SESSION['user']['role'] == 'admin')){ ?>
+	        <li>
+	        	<a href="<?= $this->url('user_list') ?>">¬Back Office</a>
+	        </li>
+	        <?php } ?>
 	        <?php if(isset($_SESSION['user'])){ ?>
 	        <li>
 	        	<a href="<?= $this->url('pixel_create') ?>">¬Création</a>
