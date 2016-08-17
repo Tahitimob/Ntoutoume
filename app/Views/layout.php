@@ -32,14 +32,17 @@
 	      <ul class="nav navbar-nav item-position">
 	        <li><a href="<?= $this->url('default_home') ?>">¬Accueil</a></li>
 	        <br>
+	        <?php if(isset($_SESSION['user'])){ ?>
+	        <li><a href="<?= $this->url('pixel_create') ?>">¬Création</a></li>
+			<br>
+			<li><a href="<?= $this->url('user_show', ['id' => $_SESSION['user']['id']]) ?>">¬Profil</a></li>
+			<br>
+			<?php } else { ?>
 			<li><a href="<?= $this->url('user_inscription') ?>">¬Inscription</a></li>
 			<br>
 			<li><a href="<?= $this->url('security_login') ?>">¬Login</a></li>
 			<br>
-			<li><a href="<?= $this->url('pixel_create') ?>">¬Création</a></li>
-			<br>
-			<li><a href="<?= $this->url('user_show', ['id' => $_SESSION['user']['id']]) ?>">¬Profil</a></li>
-			<br>
+			<?php } ?>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	    <div class="contact" id="contact">
