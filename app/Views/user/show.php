@@ -37,7 +37,7 @@ $this->layout('layout', ['title' => $title]) ?>
 		if($pixel['idUser'] == $user['id']){ ?>
 		<div id="pixels">
 			<div class="pixelart">
-				<img src="<?= $this->assetUrl('img/pixelart/'); echo $pixel['url'] ?>" alt="pixelart<?= $pixel['id']?>">
+				<img src="<?= $this->assetUrl('img/pixelart/'); echo $pixel['url'] ?>?<?php echo time();?>" alt="pixelart<?= $pixel['id']?>">
 			</div>
 			<?php if(isset($_SESSION['user']) && $_SESSION['user']['id'] == $user['id']){?> 
 				<a href="<?= $this->url('pixel_edit', ['id' => $pixel['id']]) ?>">Editer</a>
