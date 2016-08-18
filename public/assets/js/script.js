@@ -1,4 +1,5 @@
 $(function(){
+	//Sert à envoyer un input pour récupérer la chaine de couleurs du pixelart
 	function rgb2hex(rgb){
 		rgb = rgb.match(/^rgb[(](.*),[ ]*(.*),[ ]*(.*)[)]$/);
 		return "#" +
@@ -15,6 +16,9 @@ $(function(){
 			i++;
 		})
 	})
+
+
+	//Différents évènements pour changer les couleurs du pixelart
 	var hover = false;
 	var picker = false;
 	$('body').on('mousedown', '.case', function(){
@@ -39,7 +43,6 @@ $(function(){
 	.on('keydown', function(e){
 		if(e.keyCode == 65){
 			hover = true;
-			console.log(hover);
 		} else if(e.keyCode == 83){
 			hover = false;
 			picker = true;
@@ -48,7 +51,6 @@ $(function(){
 	.on('keyup', function(e){
 		if(e.keyCode == 65){
 			hover = false;
-			console.log(hover);
 		} else if(e.keyCode == 83){
 			picker = false;
 		}
@@ -65,7 +67,7 @@ $(function(){
 		$('.jscolor').css( "background-color", couleur);
 		console.log(couleur);
 	})
-
+	
 	var iWindowsSize = $(window).width();
 	if (iWindowsSize  < 1024){
  		if($('nav').hasClass('navbar-fixed-left')){
@@ -82,4 +84,43 @@ $(function(){
 			$('nav').addClass('navbar-fixed-left');
 		}
 	});
+	//Envoyer le modal
+	$('body').on('click', '.modal-validate', function(){
+		$('.error').each(function(){
+			$(this).remove();
+		})
+		var valid = true;
+		if($('#inputNom').val() == ""){ //Teste si le nom est vide
+			valid = false;
+			$('#inputNom').after('<span class="error">Le nom est vide</span>');
+		}
+		if($('#inputPrenom').val() == ""){ //Teste si le prénom est vide
+			valid = false;
+			$('#inputPrenom').after('<span class="error">Le prénom est vide</span>');
+		}
+		reg = /^[a-z0-9.\-_+]+@[a-z0-9\-]{2,}\.[a-z\-]{2,}$/;
+		isEmail = reg.test($('#inputMail').val());
+		if(!isEmail){ //Teste si l'email est vide ou invalide
+			valid = false;
+			$('#inputMail').after("<span class='error'>L'email est vide ou invalide</span>");
+		}
+		if($('#comment').val().length < 8){ //Teste si le message est trop court
+			valid = false;
+			$('#comment').after("<span class='error'>Votre message est trop court</span>");
+		}
+		if(valid){ //Si le formulaire est valide
+			
+			$.ajax({
+				url: "form",
+				data: $('#contact-form').serialize()+"&validate=",
+				type: 'POST'
+			}).done(function(response){
+				console.log(this.data);
+				alert('Votre message a été envoyé'); //Test unitaire
+
+				console.log(response);
+				$('#modal-contact').modal('hide');
+			})
+		}
+	})
 })
