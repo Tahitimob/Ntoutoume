@@ -82,36 +82,38 @@
 			      </div>
 			      <div class="modal-body modal-style">
 			          <div class="container">
-						<form class="form-horizontal">
+
+						<form class="form-horizontal" id="contact-form">
 						  	<div class="form-group">
 						    		<label for="inputNom" class="col-sm-2 control-label">Nom :</label>
 						    	<div class="col-sm-2">
-						      		<input type="text" class="form-control" id="inputNom" placeholder="Nom">
+						      		<input name="nom" type="text" class="form-control" id="inputNom" placeholder="Nom">
 						    	</div>
 						  	</div>
 					  		<div class="form-group">
 					    		<label for="inputPrenom" class="col-sm-2 control-label">Prenom :</label>
 					    		<div class="col-sm-2">
-					      			<input type="text" class="form-control" id="inputPrenom" placeholder="Prenom">
+					      			<input name="prenom" type="text" class="form-control" id="inputPrenom" placeholder="Prenom">
 					    		</div>
 					  		</div>
 					  		<div class="form-group">
 					    		<label for="inputMail" class="col-sm-2 control-label">Email :</label>
 					    		<div class="col-sm-2">
-					      			<input type="email" class="form-control" id="inputMail" placeholder="Email">
+					      			<input name="email" type="email" class="form-control" id="inputMail" placeholder="Email">
 					    		</div>
 					  		</div>
 					  		<div class="form-group">
 					    		<label for="comment" class="col-sm-2 control-label">Votre message :</label>
 					    		<div class="col-sm-2">
-					      			<textarea class="form-control" rows="5" id="comment" placeholder="Votre message..."></textarea>
+					      			<textarea name="message" class="form-control" rows="5" id="comment" placeholder="Votre message..."></textarea>
 					    		</div>
 					  		</div>
 						</form>
+
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default btn-contact-modal" data-dismiss="modal">Fermer</button>
-						<button type="button" class="btn btn-primary btn-contact-modal">Envoyer</button>
+						<button type="button" class="btn btn-primary btn-contact-modal modal-validate">Envoyer</button>
 					</div>
 			      </div> <!-- end of modal body -->
 			
