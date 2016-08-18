@@ -67,14 +67,14 @@ $(function(){
 	})
 
 	var iWindowsSize = $(window).width();
-	if (iWindowsSize  < 1000 && iWindowsSize >= 350){
+	if (iWindowsSize  < 1024){
  		if($('nav').hasClass('navbar-fixed-left')){
  			$('nav').removeClass('navbar-fixed-left');
  		}
 	}
 	$(window).resize(function(){
 		var iWindowsSize = $(window).width();
-		if (iWindowsSize  < 992){
+		if (iWindowsSize  < 1024){
 	 		if($('nav').hasClass('navbar-fixed-left')){
 	 			$('nav').removeClass('navbar-fixed-left');
 	 		}

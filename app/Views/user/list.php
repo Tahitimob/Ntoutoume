@@ -1,21 +1,18 @@
 <?php $this->layout('layout', ['title' => "Utilisateurs - Pix'Hell"]) ?>
 
 <?php $this->start('main_content') ?>
-<div class="container mef">
-	<h2 style="color:white;">Liste des utilisateurs</h2>
-		<table class="table" style="color:white;">
-    		<thead>
+<div class="container form">
+	<h2 class="title-crea">Liste des utilisateurs</h2>
+		<table class="table text-color">
 	      		<tr>
 	        		<th>#</th>
 	        		<th>Username</th>
 	        		<th>Email</th>
 	        		<th>Role</th>
 	      		</tr>
-    		</thead>
-			
 			<?php foreach ($users as $user): ?>
 				<div class="row">
-					<div class="col-md-12">
+					<div class="">
 				      	<tr>
 				        	<td><?= $user['id']; ?></td>
 				        	<td><?= $user['username']; ?></td>

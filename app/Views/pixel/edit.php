@@ -14,10 +14,35 @@
 		<div class="container">
   			<div class="col-md-4">
   				<div class="color_picker">
-					<p class="text-color"> < Rectangle color ></p>
+					<p class="text-color"> < Rectangle Color ></p>
 					<input class="jscolor" value="000000">
 				</div>
   			</div>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary btn-lg btn-crud" data-toggle="modal" data-target="#myModal">
+          Comment faire ?
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header modal-style">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Quelques astuces</h4>
+              </div>
+              <div class="modal-body modal-style">
+                <div>
+                  <p>¬ Pour colorier en série les carrés blancs, il faut rester appuyer sur < A ></p>
+                  <br>
+                  <p>¬ Pour recupérer une couleur déja posée, il faut rester appuyer sur < S ></p>
+                </div>
+              </div>
+              <div class="modal-footer modal-style">
+                <button type="button" class="btn btn-default btn-contact-modal" data-dismiss="modal">Ok !</button>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end of modal -->
   		</div>
   			<div class="col-md-4 wrap-color">
   				<p class="text-color placement"> < Couleurs Prédéfinies > </p>

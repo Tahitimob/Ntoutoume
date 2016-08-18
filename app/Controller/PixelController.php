@@ -46,16 +46,27 @@ class PixelController extends Controller
 		$pixelModel = new PixelModel();
 		$pixelModel->setTable('pixelart');
 		$pixel = $pixelModel->find($id);
+		/*$array = explode(";", $pixel['colorstring']);
+		for($i=0;$i<$pixel['width'];$i++){
+			for($j=0; $j <$pixel['width']; $j++){
+				$hexa = $array[$j+($i*$pixel['width'])];
+				$red = hexdec(substr($hexa,1,2)); 
+				$green = hexdec(substr($hexa,3,2)); 
+				$blue = hexdec(substr($hexa,5,2));
+				echo "<div style='display: inline-block; background-color: rgb(".$red.",".$green.",".$blue."); width: 20px; height: 20px;'></div>";
+			}
+			echo "<br>";
+		}*/
 		if($pixel['id']){
 			$x = (400 / $pixel['width'])*$pixel['width'] ;
 			//$y = ; Pour une futur utilisation avec des pixelart non carrés
 			$taille_cube = $x / $pixel['width'];
-			$image = imagecreate($x,$x);
+			$image = imagecreatetruecolor($x,$x);
 			$array = explode(";", $pixel['colorstring']);
-			$z = 0;
+			//$z = 0;
 			for ($j=0; $j < $x/$taille_cube ; $j++) { // i = gestion des lignes // division par le nombre de ligne -1 car on démarre à 0
 				for ($i=0; $i < $x/$taille_cube ; $i++) { // j = gestion des colonnes
-			 	 	$hexa = $array[$z];
+			 	 	$hexa = $array[$i+($j*$pixel['width'])];
 					$red = hexdec(substr($hexa,1,2)); 
 					$green = hexdec(substr($hexa,3,2)); 
 					$blue = hexdec(substr($hexa,5,2));
@@ -63,7 +74,7 @@ class PixelController extends Controller
 					$color = imagecolorallocate($image,$red,$green,$blue);
 
 					imagefilledrectangle($image,0+($taille_cube*$i),0+($taille_cube*$j),$taille_cube+($taille_cube*$i),$taille_cube+($taille_cube*$j),$color);
-					$z++;
+					//$z++;
 				
 				} 
 				

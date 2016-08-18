@@ -15,7 +15,7 @@
 		<div class="container">
   			<div class="col-md-4">
   				 <div class="color_picker">
-					 <p class="text-color"> < Rectangle color ></p>
+					 <p class="text-color"> < Rectangle Color ></p>
 					 <input class="jscolor" value="000000">
 				  </div>
   			</div>
@@ -43,7 +43,7 @@
               </div>
             </div>
           </div>
-        </div> 
+        </div> <!-- end of modal -->
   		</div>
   			<div class="col-md-4 wrap-color">
   				<p class="text-color placement"> < Couleurs Prédéfinies > </p>

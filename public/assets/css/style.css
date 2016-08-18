@@ -15,6 +15,8 @@ body {
 	font-family: 'Orbitron', sans-serif;
 	background-color: #34495e;
 	border: 1px solid #7f8c8d;
+	padding: 5px;
+
 }
 .btn-crud:hover {
 	border-color: #34495e;
@@ -36,7 +38,7 @@ body {
 
 .navbar-fixed-left {
 	position: fixed;
-	width: 170px;
+	width: 200px;
 	height: 100%;
 	background-color: #34495e;
 	border:0;
@@ -59,25 +61,20 @@ body {
 	margin-left: -4%;
 }
 
-/*.navbar-fixed-left .navbar-nav {
-	margin-top: 250%;
-	margin-left: -20%;
-	
-}*/
+
 /* Medium devices (desktops, 992px and up) */
-@media screen and (max-width: 992px){ 
+@media screen and (max-width: 1024px){ 
 
 	 body {
 	 	padding-top: 10%;
 	 }
-
 	 .mef {
 	 	padding-left: 0%;
 	 }
 	 .navbar-fixed-top {
-	background-color: #34495e;
+	background-color: rgba(52, 73, 94,0.5);
 	width: 100%;
-	height: 50px;
+	height:auto;
 	}
 	.responsive-logo{
 	 	display: none;
@@ -101,7 +98,7 @@ body {
 }
 
 /* Pour afficher le menu hamburger a partir de 992px */
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
     .navbar-header {
         float: none;
     }
@@ -138,6 +135,12 @@ body {
 	}
 }
 
+/* Responsive pour les petit ecrans*/
+@media screen and (max-width: 600px) {
+	.responsive-text {
+		font-size: 0.3em;
+	}
+}
 /******************* CONTACT ********************/
 /************************************************/
 
@@ -219,6 +222,30 @@ body {
     bottom:0;
     left:35%;
 }
+
+.vr2 {
+    width:3px;
+    background-color:#7f8c8d;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:15%;
+    animation-name: vr;
+    animation-duration:5s;
+    animation-iteration-count: infinite;
+    transition:all 0.7s ease;
+	-webkit-transition: all 0.7s ease;
+	-moz-transition: all 0.7s ease;
+	-o-transition: all 0.7s ease;
+}
+.vr3 {
+    width:3px;
+    background-color:#7f8c8d;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:75%;
+}
 /************************************************/
 
 /* Animation de la fléche page home */
@@ -247,6 +274,19 @@ body {
 	-o-transition: all 0.7s ease;
 }
 
+/* animation des lignes de fonds */
+
+@keyframes vr {
+    0%   {
+    	transform: background-color:#7f8c8d;
+    }
+    50% {
+    	transform: background-color:#red;;
+    }
+    100% {
+    	transform: background-color:#7f8c8d;
+    }
+}
 
 
 /************************************************************************************************/
@@ -475,4 +515,29 @@ body {
 
 .pixelart img{
 	width: 100%;
+}
+
+/************************************************************************************************/
+/*****************************************PROFIL*************************************************/
+/************************************************************************************************/
+
+.img-profil {
+	padding: 50px;
+}
+
+/************************************************************************************************/
+/*****************************************LISTE UTILISATEURS*************************************/
+/************************************************************************************************/
+
+.list-users {
+	
+}
+
+.glyphicon-pencil {
+	font-size: 3em;
+}
+
+.profil-pad {
+  padding-right: 5%;
+
 }

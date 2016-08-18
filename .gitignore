@@ -3,4 +3,4 @@ public/assets/vendor
 app/config.php
 /phpDocumentor.phar
 *.log
-public/assets/img/pixelart
+/public/assets/img/pixelart

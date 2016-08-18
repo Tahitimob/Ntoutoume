@@ -16,6 +16,11 @@
 	<nav class="navbar navbar-default navbar-fixed-top navbar-fixed-left">
 	  	<div class="container-fluid">
 	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <!-- <div class="container responsive-logo">
+	      	<a class="navbar-brand brand-position" href="<?= $this->url('default_home') ?>">
+				<img class="brandStyle" alt="Logo pix'hell" src="<?= $this->assetUrl('img/pixhell.png')?>">
+	      	</a>
+	  	</div> -->
 	    <div class="navbar-header">
 	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 	        <span class="sr-only">Toggle navigation</span>
@@ -32,7 +37,6 @@
 	        <li>
 	        	<a href="<?= $this->url('default_home') ?>">¬Accueil</a>
 	        </li>
-	        <br>
 	        <?php if(isset($_SESSION['user']) && ($_SESSION['user']['role'] == 'admin')){ ?>
 	        <li>
 	        	<a href="<?= $this->url('user_list') ?>">¬Back Office</a>
@@ -42,23 +46,23 @@
 	        <li>
 	        	<a href="<?= $this->url('pixel_create') ?>">¬Création</a>
 	        </li>
-			<br>
+			
 			<li>
 				<a href="<?= $this->url('user_show', ['id' => $_SESSION['user']['id']]) ?>">¬Profil</a>
 			</li>
 			<li>
 				<a href="<?= $this->url('security_logout') ?>">¬Deconnexion</a>
 			</li>
-			<br>
+			
 			<?php } else { ?>
 			<li>
 				<a href="<?= $this->url('user_inscription') ?>">¬Inscription</a>
 			</li>
-			<br>
+			
 			<li>
 				<a href="<?= $this->url('security_login') ?>">¬Login</a>
 			</li>
-			<br>
+			>
 
 			<?php } ?>
 			<div class="hidden-contact">
@@ -66,14 +70,10 @@
 					<a href="#" data-toggle="modal" data-target="#modal-contact">&nbsp;&nbsp;&nbsp;¬Contact</a>	
 				</li>
 			</div>
-			<br>
+			
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
-	    <div class="container responsive-logo">
-	      		<a class="navbar-brand brand-position" href="<?= $this->url('default_home') ?>">
-				<img class="brandStyle" alt="Logo pix'hell" src="<?= $this->assetUrl('img/pixhell.png')?>">
-	      		</a>
-	  		</div>
+	    
 	    <div class="contact" id="contact">
 	    	<!-- Button trigger modal -->
 		<button type="button" class="btn btn-primary btn-lg btn-contact" data-toggle="modal" data-target="#modal-contact">
