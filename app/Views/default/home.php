@@ -1,9 +1,10 @@
 <?php $this->layout('layout', ['title' => "Pix'Hell"]) ?>
 
 <?php $this->start('main_content') ?>
+<div class="container-fluid">
 <div id="home" class="mef">
   <div class="vertical-line"></div>
-	<div class="container">
+	<div class="container responsive-text text-center">
     <h2 class="title">WELCOME</h2>
     <h2 class="title">ON</h2>
     <h1 class="title text-center">PIX'HELL</h1>
@@ -20,5 +21,6 @@
     </div>
   </div>
   
+</div>
 </div>
 <?php $this->stop('main_content') ?>

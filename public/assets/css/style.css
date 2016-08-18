@@ -3,7 +3,7 @@
 
 body {
 	background-color: #2c3e50;
-	
+	font-size: 1em;
 }
 
 .mef {
@@ -21,6 +21,10 @@ body {
 	background-color: #7f8c8d;
 	color:#34495e;
 	border: 1px solid #34495e;
+}
+
+.hidden-contact {
+	display: none;
 }
 /************************************************************************************************/
 /********************************************LAYOUT**********************************************/
@@ -40,10 +44,11 @@ body {
 	z-index: 9;
 
 }
+
 .navbar-default .navbar-nav>li>a {
 	color:#7f8c8d;
 	font-family: 'Orbitron', sans-serif;
-	font-size: 1.2em;
+	font-size: 2em;
 
 }
 .navbar-brand {
@@ -54,10 +59,83 @@ body {
 	margin-left: -4%;
 }
 
-.item-position {
+/*.navbar-fixed-left .navbar-nav {
 	margin-top: 250%;
 	margin-left: -20%;
 	
+}*/
+/* Medium devices (desktops, 992px and up) */
+@media screen and (max-width: 992px){ 
+
+	 body {
+	 	padding-top: 10%;
+	 }
+
+	 .mef {
+	 	padding-left: 0%;
+	 }
+	 .navbar-fixed-top {
+	background-color: #34495e;
+	width: 100%;
+	height: 50px;
+	}
+	.responsive-logo{
+	 	display: none;
+	}
+	.btn-contact {
+	display: none;
+	}
+	.hidden-contact {
+		display: block;
+		color:#7f8c8d;
+		font-family: 'Orbitron', sans-serif;
+		font-size: 2em;
+	}
+	.hidden-contact a {
+		color:#7f8c8d;
+	}
+	.responsive-text {
+		font-size: 1em;
+	}
+
+}
+
+/* Pour afficher le menu hamburger a partir de 992px */
+@media (max-width: 992px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+		margin-top: 7.5px;
+	}
+	.navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+  		display:block !important;
+	}
 }
 
 /******************* CONTACT ********************/

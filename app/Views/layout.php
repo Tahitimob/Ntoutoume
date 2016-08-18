@@ -13,7 +13,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
 <body>
-	<nav class="navbar navbar-default navbar-fixed-left">
+	<nav class="navbar navbar-default navbar-fixed-top navbar-fixed-left">
 	  	<div class="container-fluid">
 	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">
@@ -23,11 +23,7 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <div class="container">
-	      		<a class="navbar-brand brand-position" href="<?= $this->url('default_home') ?>">
-				<img class="brandStyle" alt="Logo pix'hell" src="<?= $this->assetUrl('img/pixhell.png')?>">
-	      		</a>
-	  		</div>
+	        
 	    </div>
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->
@@ -63,9 +59,21 @@
 				<a href="<?= $this->url('security_login') ?>">¬Login</a>
 			</li>
 			<br>
+
 			<?php } ?>
+			<div class="hidden-contact">
+				<li>
+					<a href="#" data-toggle="modal" data-target="#modal-contact">&nbsp;&nbsp;&nbsp;¬Contact</a>	
+				</li>
+			</div>
+			<br>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
+	    <div class="container responsive-logo">
+	      		<a class="navbar-brand brand-position" href="<?= $this->url('default_home') ?>">
+				<img class="brandStyle" alt="Logo pix'hell" src="<?= $this->assetUrl('img/pixhell.png')?>">
+	      		</a>
+	  		</div>
 	    <div class="contact" id="contact">
 	    	<!-- Button trigger modal -->
 		<button type="button" class="btn btn-primary btn-lg btn-contact" data-toggle="modal" data-target="#modal-contact">
@@ -117,7 +125,7 @@
 			
 			    </div>
 			  </div>
-			</div>
+			</div> <!-- end of modal -->
 	    </div>
 	  </div><!-- /.container-fluid -->
 	</nav>
