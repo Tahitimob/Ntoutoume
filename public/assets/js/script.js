@@ -84,6 +84,10 @@ $(function(){
 			$('nav').addClass('navbar-fixed-left');
 		}
 	});
+
+	$('body').on('click', '.hide-nav', function(){
+		$('.navbar-fixed-left').toggle(400);
+	})
 	//Envoyer le modal
 	$('body').on('click', '.modal-validate', function(){
 		$('.error').each(function(){

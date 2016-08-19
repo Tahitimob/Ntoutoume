@@ -13,6 +13,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
 <body>
+	<div class="toggle-nav">
+		<button class="btn btn-deflaut btn-crud hide-nav">¬Hide¬</button>
+	</div>
 	<nav class="navbar navbar-default navbar-fixed-top navbar-fixed-left">
 	  	<div class="container-fluid">
 	    <!-- Brand and toggle get grouped for better mobile display -->
@@ -75,6 +78,7 @@
 	    </div><!-- /.navbar-collapse -->
 	    
 	    <div class="contact" id="contact">
+	    	
 	    	<!-- Button trigger modal -->
 		<button type="button" class="btn btn-primary btn-lg btn-contact" data-toggle="modal" data-target="#modal-contact">
 		Contact
@@ -123,15 +127,13 @@
 						<button type="button" class="btn btn-default btn-contact-modal" data-dismiss="modal">Fermer</button>
 						<button type="button" class="btn btn-primary btn-contact-modal modal-validate">Envoyer</button>
 					</div>
-			      </div> <!-- end of modal body -->
-			
+			      </div> <!-- end of modal body -->						
 			    </div>
 			  </div>
 			</div> <!-- end of modal -->
 	    </div>
 	  </div><!-- /.container-fluid -->
 	</nav>
-
 		
 
 	<section  class="text-center">

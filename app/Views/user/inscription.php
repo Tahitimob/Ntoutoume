@@ -24,7 +24,7 @@
 				<label for="cf-password">Confirmation password :</label>
 				<input type="password" class="form-control" name="cf-password" placeholder="Confimation du mot de passe" id="cf-password">
 			</div>
-		<button name="register">S'inscire</button>
+		<button name="register" class="btn btn-default btn-inscription">S'inscire</button>
 		</form>
 	</div>
 	</div>

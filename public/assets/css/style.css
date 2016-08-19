@@ -7,7 +7,7 @@ body {
 }
 
 .mef {
-	padding-left: 5%;
+	margin-left: 200px;
 }
 
 .btn-crud {
@@ -57,6 +57,10 @@ body {
 	padding:0;
 }
 
+.item-position {
+	    padding-top: 60%;
+}
+
 .brand-position {
 	margin-left: -4%;
 }
@@ -94,7 +98,10 @@ body {
 	.responsive-text {
 		font-size: 1em;
 	}
-
+	
+	.item-position {
+		padding-top: 0%;
+}
 }
 
 /* Pour afficher le menu hamburger a partir de 992px */
@@ -179,6 +186,14 @@ body {
 .btn-contact-modal:hover {
 	border-color: #34495e;
 }
+
+.hide-nav {
+	position: relative;
+    top: 0;
+    left: 0%;
+    z-index: 10;
+}
+
 /************************************************/
 /******************* FOOTER *********************/
 /************************************************/
@@ -313,8 +328,23 @@ body {
  border-top-width:177px;
  border-color:transparent;
  border-left-color:#7f8c8d;
+ left:15%;
  } 
 
+.btn-inscription {
+	border: 2px solid #7f8c8d;
+	background-color: #34495e;
+	color:#7f8c8d;
+	font-family: 'Orbitron', sans-serif;
+	padding: 25px;
+	margin-top: 25px;
+}
+
+.btn-inscription:hover {
+	border-color: #34495e;
+	background-color: #7f8c8d;
+	color:#34495e;
+}
 
 /************************************************************************************************/
 /********************************************CREATION********************************************/
