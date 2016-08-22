@@ -17,11 +17,17 @@ $this->layout('layout', ['title' => $title]) ?>
 			        <tr>
 				        <div class="form-group">
 				        	<td><label><?= $user['email']?></label></td>
-				          	<td><input type="text" name="email" placeholder="New Email"></td>
+				          	<td><input type="email" name="email" placeholder="New Email"></td>
 				        </div>
 			        </tr>
 		        </table>
 		       <input type="submit" name="sauvegarder" value="sauvegarder" class="btn-contact">
+		       <?php
+				if (isset($error)) {
+					echo "<br>";
+					echo $error;
+				}
+				?>
 		     </form>
 		</div>
   	</div>

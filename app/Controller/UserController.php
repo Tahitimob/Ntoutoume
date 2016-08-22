@@ -27,12 +27,12 @@ class UserController extends Controller
 		$user = new UserModel();
 		$user = $user->find($id);
 		if (isset($_POST['sauvegarder'])) {
-			if ($username = $_POST['username'] == "") {
+			if ($username = empty($_POST['username'])) {
 				$username = $user['username'];
 			}else{
 				$username = $_POST['username'];
 			}
-			if ($email = $_POST['email'] == "") {
+			if ($email = empty($_POST['email'])) {
 				$email = $user['email'];
 			}else{
 				$email = $_POST['email'];
@@ -42,7 +42,7 @@ class UserController extends Controller
 			$user->setTable('users');
 			$NewUser = $user->update($table_user, $id);
 			if (!empty($NewUser)) {
-				$this->redirectToRoute('user_show');
+				$this->redirectToRoute('user_show', ['id' => $id]);
 			}else{
 				$this->show('user/edit', ['error' => "L'édition a échouée"]);
 			}
@@ -62,7 +62,7 @@ class UserController extends Controller
 			$user->setTable('users');
 			$NewUser = $user->delete($id);
 			if (!empty($NewUser)) {
-				$this->redirectToRoute('user_show');
+				$this->redirectToRoute('user_show', ['id' => $id]);
 			}else{
 				$this->show('user/delete/[i:id]', ['error' => "La suppression a échouée"]);//delete win mais fail redirect
 			}
