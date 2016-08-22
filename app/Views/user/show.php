@@ -20,11 +20,6 @@ $this->layout('layout', ['title' => $title]) ?>
           <label>Email :</label>
           <label><?= $user['email']?></label>
         </div>
-       <input class ="btn-crud" type="submit" name="edit" value="EDITER">
-        <div class="form-group">
-          <label>Role :</label>
-          <label><?= $user['role']?></label>
-        </div>
         <?php 
           // var_dump($_SESSION['user']['id']);
           // var_dump($user['id']);
