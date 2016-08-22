@@ -11,7 +11,7 @@ class ContactController extends Controller
 	{
 		
 		if(isset($_POST['validate'])){
-			$to = "projetWF@gmail.com";
+			/*$to = "projetWF@gmail.com";
 			$subject = "Contact Pix'hell";
 			$txt = $_POST['prenom']." ".$_POST['nom']."\r\n".$_POST['message'];
 			$headers = "From: ".$_POST['email'] . "\r\n"
@@ -22,6 +22,18 @@ class ContactController extends Controller
 				echo "Echec";
 			} else {
 				echo "Ok";
+			}*/
+			$mail = new \PHPMailer();
+			$mail->IsSMTP();
+			$mail->setFrom($_POST['email'], $_POST['nom']);
+			$mail->addAddress("projetWF@gmail.com");
+			$mail->Subject = "Contact Pix'hell";
+			$mail->Body =  $_POST['prenom']." ".$_POST['nom']."\r\n".$_POST['message'];
+			if(!$mail->send()) {
+			    echo 'Message could not be sent.';
+			    echo 'Mailer Error: ' . $mail->ErrorInfo;
+			} else {
+			    echo 'Message has been sent';
 			}
 		}
 	}
