@@ -7,7 +7,7 @@ body {
 }
 
 .mef {
-	margin-left: 200px;
+	margin-left: 5%;
 }
 
 .btn-crud {
@@ -58,7 +58,7 @@ body {
 }
 
 .item-position {
-	    padding-top: 60%;
+	padding-top: 60%;
 }
 
 .brand-position {
@@ -66,7 +66,7 @@ body {
 }
 
 
-/* Medium devices (desktops, 992px and up) */
+/* Medium devices (desktops, 1024px and up) */
 @media screen and (max-width: 1024px){ 
 
 	 body {
@@ -101,10 +101,14 @@ body {
 	
 	.item-position {
 		padding-top: 0%;
-}
+	}
+
+	.hide-nav {
+		display: none;
+	}
 }
 
-/* Pour afficher le menu hamburger a partir de 992px */
+/* Pour afficher le menu hamburger a partir de 1024px */
 @media (max-width: 1024px) {
     .navbar-header {
         float: none;
@@ -187,8 +191,17 @@ body {
 	border-color: #34495e;
 }
 
+.btn-hide {
+	color:#7f8c8d;
+	font-family: 'Orbitron', sans-serif;
+	background-color: #34495e;
+	border: 1px solid #7f8c8d;
+	border-radius: 0;
+	padding: 5px;
+}
+
 .hide-nav {
-	position: relative;
+	position: fixed;
     top: 0;
     left: 0%;
     z-index: 10;
@@ -220,33 +233,64 @@ body {
 	font-family: 'Press Start 2P', cursive;
 	color:#7f8c8d;
 	font-size: 8em;
+	z-index: 9;
+	position: relative;
 
 }
 
 /*****************LINES********************************/
 .hr {
 	width: 100%;
+	z-index: 0;
 	border-top:3px solid #7f8c8d;
+	animation-name: hr;
+    animation-duration:4s;
+    animation-iteration-count: infinite;
+    transition:all 1s ease;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+}
+
+@keyframes hr {
+	0% {
+		border-top-color: #7f8c8d;
+	}
+	50% {
+		border-top-color: #ecf0f1;
+	}
+	100%{
+		border-top-color: #7f8c8d;
+	}
 }
 
 .vr {
     width:3px;
+    z-index: 0;
     background-color:#7f8c8d;
     position:absolute;
     top:0;
     bottom:0;
     left:35%;
+    animation-name: vr;
+    animation-duration:4s;
+    animation-iteration-count: infinite;
+    transition:all 0.7s ease;
+	-webkit-transition: all 0.7s ease;
+	-moz-transition: all 0.7s ease;
+	-o-transition: all 0.7s ease;
 }
 
 .vr2 {
     width:3px;
     background-color:#7f8c8d;
     position:absolute;
+    z-index: 0;
     top:0;
     bottom:0;
     left:15%;
     animation-name: vr;
-    animation-duration:5s;
+    animation-duration:4s;
     animation-iteration-count: infinite;
     transition:all 0.7s ease;
 	-webkit-transition: all 0.7s ease;
@@ -255,11 +299,19 @@ body {
 }
 .vr3 {
     width:3px;
+    z-index: 0;
     background-color:#7f8c8d;
     position:absolute;
     top:0;
     bottom:0;
     left:75%;
+    animation-name: vr;
+    animation-duration:4s;
+    animation-iteration-count: infinite;
+    transition:all 0.7s ease;
+	-webkit-transition: all 0.7s ease;
+	-moz-transition: all 0.7s ease;
+	-o-transition: all 0.7s ease;
 }
 /************************************************/
 
@@ -293,13 +345,13 @@ body {
 
 @keyframes vr {
     0%   {
-    	transform: background-color:#7f8c8d;
+    	background-color:#7f8c8d;
     }
     50% {
-    	transform: background-color:#red;;
+    	background-color:#ecf0f1;
     }
     100% {
-    	transform: background-color:#7f8c8d;
+    	background-color:#7f8c8d;
     }
 }
 
@@ -328,7 +380,7 @@ body {
  border-top-width:177px;
  border-color:transparent;
  border-left-color:#7f8c8d;
- left:15%;
+ 
  } 
 
 .btn-inscription {

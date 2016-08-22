@@ -14,7 +14,7 @@
 </head>
 <body>
 	<div class="toggle-nav">
-		<button class="btn btn-deflaut btn-crud hide-nav">¬Hide¬</button>
+		<button class="btn btn-deflaut btn-hide hide-nav">¬Hide¬</button>
 	</div>
 	<nav class="navbar navbar-default navbar-fixed-top navbar-fixed-left">
 	  	<div class="container-fluid">

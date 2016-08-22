@@ -7,7 +7,7 @@
 	    <div class="form-group col-md-6 col-md-offset-3">
 		    <form action="<?= $this->url('security_logout') ?>" method="POST">
 		    	<h3 class="text-color">Etes vous sur de vouloir vous déconnecter ?</h3>
-		       <button type="submit" class="btn btn-default" name="security_logout">Se déconnecter</button>
+		       <button type="submit" class="btn btn-default btn-inscription" name="security_logout">Se déconnecter</button>
 		    </form>
 		</div>
   	</div>
