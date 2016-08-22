@@ -12,10 +12,6 @@ $this->layout('layout', ['title' => $title]) ?>
       <form action="<?= $this->url('user_edit', ['id' => $_SESSION['user']['id']]) ?>" method="POST">
         <hr class="hr">
         <div class="form-group">
-          <label>ID :</label>
-          <label><?= $user['id']?></label>
-        </div>
-        <div class="form-group">
           <div class="vr3">&nbsp;</div>
           <label>Nom d'utilisateur :</label>
           <label><?= $user['username']?></label>
@@ -23,10 +19,6 @@ $this->layout('layout', ['title' => $title]) ?>
         <div class="form-group">
           <label>Email :</label>
           <label><?= $user['email']?></label>
-        </div>
-        <div class="form-group">
-          <label>Role :</label>
-          <label><?= $user['role']?></label>
         </div>
        <input class ="btn-crud" type="submit" name="edit" value="EDITER">
       </form>

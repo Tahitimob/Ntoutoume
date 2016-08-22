@@ -32,9 +32,9 @@
               </div>
               <div class="modal-body modal-style">
                 <div>
-                  <p>¬ Pour colorier en série les carrés blancs, il faut rester appuyer sur < A ></p>
+                  <p>< A > Colore tous les carrés survolés</p>
                   <br>
-                  <p>¬ Pour recupérer une couleur déja posée, il faut rester appuyer sur < S ></p>
+                  <p>< S > Récupère la couleur du carré survolé</p>
                 </div>
               </div>
               <div class="modal-footer modal-style">

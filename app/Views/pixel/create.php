@@ -33,7 +33,7 @@
               </div>
               <div class="modal-body modal-style">
                 <div>
-                  <p>< A > Colorie tous les carrés survolés</p>
+                  <p>< A > Colore tous les carrés survolés</p>
                   <br>
                   <p>< S > Récupère la couleur du carré survolé</p>
                 </div>
