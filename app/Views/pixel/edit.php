@@ -20,7 +20,7 @@
   			</div>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary btn-lg btn-crud" data-toggle="modal" data-target="#myModal">
-          Comment faire ?
+          Raccourcis clavier
         </button>
         <!-- Modal -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

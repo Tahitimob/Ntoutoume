@@ -65,6 +65,7 @@ $(function(){
 	.on('mousedown', '.box', function(){
 		var couleur = $(this).css('background-color');
 		$('.jscolor').css( "background-color", couleur);
+		$('.jscolor').val(rgb2hex(couleur).substr(1,6).toUpperCase());
 		console.log(couleur);
 	})
 	
