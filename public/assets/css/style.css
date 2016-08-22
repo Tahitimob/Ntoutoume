@@ -452,12 +452,26 @@ body {
 	background-color: #7f8c8d;
 	color:#34495e;
 }
+/** Changement background **/
+
+.background {
+	margin-bottom: 2%;
+	width: 52%;
+	height: 10px;
+	border:2px solid #7f8c8d;
+}
+
+.text-align {
+	position:relative;
+	right: 28%;
+
+}
 
 /**** BOX ****/
 
 .color_picker {
 	margin-left: -55%;
-	margin-bottom: 25%;
+	margin-bottom: 10%;
 }
 
 .wrap-color {

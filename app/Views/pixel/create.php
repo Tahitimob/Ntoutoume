@@ -18,6 +18,8 @@
 					 <p class="text-color"> < Rectangle Color ></p>
 					 <input class="jscolor" value="000000">
 				  </div>
+          <p class="text-color text-align">< Background ></p>
+            <div class="row background col-md-6" style="background-color: rgb(255,255,255)"></div>
   			</div>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary btn-lg btn-crud" data-toggle="modal" data-target="#myModal">
@@ -36,6 +38,8 @@
                   <p>< A > Colore tous les carrés survolés</p>
                   <br>
                   <p>< S > Récupère la couleur du carré survolé</p>
+                  <br>
+                  <p>< G > Pour gommer</p>
                 </div>
               </div>
               <div class="modal-footer modal-style">
@@ -44,7 +48,7 @@
             </div>
           </div>
         </div> <!-- end of modal -->
-  		</div>
+  		</div> <!-- end of container -->
   			<div class="col-md-4 wrap-color">
   				<p class="text-color placement"> < Couleurs Prédéfinies > </p>
   				<div class="row box-placement">
@@ -97,10 +101,6 @@
   					<div class="col-md-3 box white3"></div>
   					<div class="col-md-3 box white4"></div>
   				</div>
-          <!-- POUR LE BACKGROUND, A METTRE EN FORME !!-->
-          <div class="row background" style="background-color: rgb(255,255,255)">
-            <span>Background</span>
-          </div>
   			</div>
       
 			<div class="container">
