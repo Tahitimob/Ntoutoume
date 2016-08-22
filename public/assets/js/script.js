@@ -21,9 +21,10 @@ $(function(){
 	//Différents évènements pour changer les couleurs du pixelart
 	var hover = false;
 	var picker = false;
-	$('body').on('mousedown', '.case', function(){
-	   	console.log('Ok');
-		   	 
+	var erase = false;
+	$('body').on('mousedown', '.case', function(e){
+	   	e.preventDefault();
+		hover = true;
 		/*var couleur ="rgb("
 	   	 	+ (Math.floor(Math.random() * 256)) + ","
 			+ (Math.floor(Math.random() * 256)) + ","
@@ -33,6 +34,10 @@ $(function(){
 			var couleur = $(this).css('background-color');
 			$('.jscolor').css( "background-color", couleur);
 			console.log(couleur);
+		} else if(erase){
+			var couleur = "rgb(255,255,255)";
+			$(this).css( "background-color", couleur);
+			console.log(couleur);
 		}
 		else {
 			var couleur = $('.jscolor').css('background-color');
@@ -40,24 +45,42 @@ $(function(){
 			console.log(couleur);	 	
 		}
 	})
+	.on('mouseup', function(){
+		hover = false;
+	})
 	.on('keydown', function(e){
 		if(e.keyCode == 65){
 			hover = true;
+			picker = false;
+			erase = false;
 		} else if(e.keyCode == 83){
 			hover = false;
 			picker = true;
+			erase = false;
+		} else if(e.keyCode == 71){
+			hover = false;
+			picker = false;
+			erase = true;
 		}
+		console.log(e.keyCode);
 	})
 	.on('keyup', function(e){
 		if(e.keyCode == 65){
 			hover = false;
 		} else if(e.keyCode == 83){
 			picker = false;
+		} else if(e.keyCode == 71){
+			erase = false;
 		}
+		console.log(e.keyCode);
 	})
 	.on('mouseover', '.case', function(){
 		if(hover){
 			var couleur = $('.jscolor').css('background-color');
+			$(this).css( "background-color", couleur);
+			console.log(couleur);
+		}else if(erase){
+			var couleur = "rgb(255,255,255)";
 			$(this).css( "background-color", couleur);
 			console.log(couleur);
 		}
@@ -69,6 +92,8 @@ $(function(){
 		console.log(couleur);
 	})
 	
+
+
 	var iWindowsSize = $(window).width();
 	if (iWindowsSize  < 1024){
  		if($('nav').hasClass('navbar-fixed-left')){
@@ -100,6 +125,7 @@ $(function(){
 			$('.navbar-fixed-left').toggle(400);
 		}	
 	})
+
 	//Envoyer le modal
 	$('body').on('click', '.modal-validate', function(){
 		$('.error').each(function(){
@@ -131,10 +157,8 @@ $(function(){
 				data: $('#contact-form').serialize()+"&validate=",
 				type: 'POST'
 			}).done(function(response){
-				console.log(this.data);
-				alert('Votre message a été envoyé'); //Test unitaire
+				alert(response); 
 
-				console.log(response);
 				$('#modal-contact').modal('hide');
 			})
 		}

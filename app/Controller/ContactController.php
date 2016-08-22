@@ -30,10 +30,9 @@ class ContactController extends Controller
 			$mail->Subject = "Contact Pix'hell";
 			$mail->Body =  $_POST['prenom']." ".$_POST['nom']."\r\n".$_POST['message'];
 			if(!$mail->send()) {
-			    echo 'Message could not be sent.';
-			    echo 'Mailer Error: ' . $mail->ErrorInfo;
+			    echo "Erreur: le message n'a pas été envoyé";
 			} else {
-			    echo 'Message has been sent';
+			    echo 'Le message a été envoyé';
 			}
 		}
 	}

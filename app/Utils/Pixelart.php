@@ -6,7 +6,7 @@ use \Model\PixelModel ;
 class Pixelart {
 	private $colorstring = ""; //La chaîne de caractère en hexa
 	private $id;
-	private $width = 40;
+	private $width = 30;
 	//private $height = 4;
 	private $data = array();
 	private $dateCreated;
