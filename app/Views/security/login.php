@@ -16,6 +16,12 @@
           <input type="password" class="form-control" name="password" placeholder="Mot de passe" id="password">
         </div>
        <button type="submit" class="btn btn-default btn-inscription" name="security_login">Se connecter</button>
+      <?php
+        if (isset($error)) {
+          echo "<br>";
+          echo $error;
+        }
+      ?>
       </form>
     </div>
   </div>
