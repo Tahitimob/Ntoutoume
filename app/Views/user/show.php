@@ -28,7 +28,16 @@ $this->layout('layout', ['title' => $title]) ?>
           <label>Role :</label>
           <label><?= $user['role']?></label>
         </div>
-       <input class ="btn-crud" type="submit" name="edit" value="EDITER">
+        <?php 
+          // var_dump($_SESSION['user']['id']);
+          // var_dump($user['id']);
+
+          if ($_SESSION['user']['id'] == $user['id']) {//id session = id edit
+            ?>
+            <input class ="btn-crud" type="submit" name="edit" value="EDITER">
+            <?php
+          }
+        ?>
       </form>
     </div>
   </div>
