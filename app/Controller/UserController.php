@@ -91,19 +91,31 @@ class UserController extends Controller
 
 	public function inscription(){
 		if (isset($_POST['register'])) {
-			$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-			$table_user = array('username' => $_POST['username'], 'email' => $_POST['email'], 'password' => $password, 'role' => 'user');
-			$user = new UserModel();
-			$user->setTable('users');
-			$User1 = $user->insert($table_user);
-			if (!empty($User1)) {
-				$auth = new Auth();
-				$auth->logUserIn($User1);
-				$this->redirectToRoute('default_home');
+			$password = $_POST['password'];			
+			$cf_password = $_POST['cf-password'];
+
+			if (!empty($_POST['username']) && !empty($_POST['email']) && !empty($password) && !empty($cf_password)) {
+				if ($password == $cf_password) {
+					$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+					$table_user = array('username' => $_POST['username'], 'email' => $_POST['email'], 'password' => $password, 'role' => 'user');
+					$user = new UserModel();
+					$user->setTable('users');
+					$User1 = $user->insert($table_user);
+					if (!empty($User1)) {
+						$auth = new Auth();
+						$auth->logUserIn($User1);
+						$this->redirectToRoute('default_home');
+					}else{
+						$this->show('user/inscription', ['error' => "L'inscription a échouée"]);
+					}
+				}else{
+					$this->show('user/inscription', ['error' => "L'inscription a échouée, le mot de passe et sa confirmation sont différents"]);
+					// var_dump("L'inscription a échouée, le mot de passe et sa confirmation sont différents");
+				}
 			}else{
-				$this->show('user/inscription', ['error' => "L'inscription a échouée"]);
-			}
-			
+				$this->show('user/inscription', ['error' => "L'inscription a échouée, au moins un champ est vide"]);
+				// var_dump("L'inscription a échouée, le mot de passe et sa confirmation sont différents");
+			}				
 
 		}
 		$this->show('user/inscription');

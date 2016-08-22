@@ -25,6 +25,12 @@
 				<input type="password" class="form-control" name="cf-password" placeholder="Confimation du mot de passe" id="cf-password">
 			</div>
 		<button name="register" class="btn btn-default btn-inscription">S'inscire</button>
+		<?php
+		if (isset($error)) {
+			echo "<br>";
+			echo $error;
+		}
+		?>
 		</form>
 	</div>
 	</div>
