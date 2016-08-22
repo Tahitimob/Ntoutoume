@@ -65,7 +65,7 @@
 			<li>
 				<a href="<?= $this->url('security_login') ?>">¬Login</a>
 			</li>
-			>
+			
 
 			<?php } ?>
 			<div class="hidden-contact">
