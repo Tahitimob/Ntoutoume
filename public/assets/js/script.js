@@ -79,8 +79,8 @@ $(function(){
 			var couleur = $('.jscolor').css('background-color');
 			$(this).css( "background-color", couleur);
 			console.log(couleur);
-		}else if(erase){
-			var couleur = "rgb(255,255,255)";
+		}else if(erase){ //Met la couleur des pixels à celle du background
+			var couleur = $('.background').css('background-color');
 			$(this).css( "background-color", couleur);
 			console.log(couleur);
 		}
@@ -91,7 +91,18 @@ $(function(){
 		$('.jscolor').val(rgb2hex(couleur).substr(1,6).toUpperCase());
 		console.log(couleur);
 	})
-	
+	.on('click','.background', function(){ //Pour choisir une couleur de fond au pixel art
+		var bgcouleur = $(this).css( "background-color");
+		var couleur = $('.jscolor').css('background-color');
+		$(this).css( "background-color", couleur);
+		$('.case').each(function(){
+			if($(this).css( "background-color") == bgcouleur){
+				$(this).css( "background-color", couleur);
+			}
+		})
+	})
+
+
 
 
 	var iWindowsSize = $(window).width();

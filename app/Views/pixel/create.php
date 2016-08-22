@@ -97,8 +97,12 @@
   					<div class="col-md-3 box white3"></div>
   					<div class="col-md-3 box white4"></div>
   				</div>
+          <!-- POUR LE BACKGROUND, A METTRE EN FORME !!-->
+          <div class="row background" style="background-color: rgb(255,255,255)">
+            <span>Background</span>
+          </div>
   			</div>
-
+      
 			<div class="container">
 			 <br>
 				<?php
