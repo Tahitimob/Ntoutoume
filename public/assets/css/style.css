@@ -386,13 +386,14 @@ body {
 
 .wrap {
 	position: absolute;
-	left:8%;
+	
 }
  #b {
  position: relative;
  z-index:0;
  border:118px solid;
  border-top-width:177px;
+ border-left-width: 203px;
  border-color:transparent;
  border-left-color:#7f8c8d;
  
