@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 16 Août 2016 à 12:09
+-- Généré le :  Lun 22 Août 2016 à 07:49
 -- Version du serveur :  5.7.9
 -- Version de PHP :  7.0.0
 
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `pixelart` (
   `dateCreated` date NOT NULL,
   PRIMARY KEY (`id`),
   KEY `idUser` (`idUser`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -53,15 +53,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `password` varchar(255) NOT NULL,
   `role` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
-
---
--- Contenu de la table `users`
---
-
-INSERT INTO `users` (`id`, `username`, `email`, `password`, `role`) VALUES
-(7, 'toto', 'toto@toto.toto', '$2y$10$.TsKgjpREWwOLGEDyQpFc.W8RlzMOZz.OjvN8TZa1LPxFuv2wqg0a', 'user'),
-(8, 'test', 'test@test.fr', '$2y$10$9FkZfJwMXkjL85wMHKtlQ.AdUaBAJxDm15oeiPT8PVsaE9eyQeFoC', 'admin');
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Contraintes pour les tables exportées
