@@ -7,6 +7,7 @@
 	height: 50px;
 }</style>
 <div id="creation" class="mef">
+  <hr class="hr">
 	<div class="container">
 		<div class="title-crea">
 			<p>EDITION</p>
