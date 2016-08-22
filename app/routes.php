@@ -15,6 +15,7 @@
 		['GET|POST', '/pixel/create', 'Pixel#create', 'pixel_create'], //page de création de pixel
 		['GET|POST', '/pixel/create/[i:id]', 'Pixel#createImage', 'pixel_create_image'], //transformation en image
 		['GET|POST', '/pixel/edit/[i:id]', 'Pixel#edit', 'pixel_edit'], //édition de pixel
+		['GET|POST', '/pixel/delete/[i:id]', 'Pixel#delete', 'pixel_delete'], //suppression de pixel
 		['GET', '/pixel', 'Pixel#list', 'pixel_list'], // Page d'affichage des pixel arts
 
 		['POST', '/form', 'Contact#sendMail', 'contact_send_mail'] //Envoi du formulaire

@@ -112,6 +112,31 @@ class PixelController extends Controller
 		}
 	}
 
+	public function delete($id)
+	{
+		if(isset($_SESSION['user'])){
+			$pixelModel = new PixelModel();
+			$pixelModel->setTable('pixelart');
+			$pixel = $pixelModel->find($id);
+			if(isset($pixel['id']) && $pixel['idUser'] == $_SESSION['user']['id']){
+				
+				if(isset($_POST['delete'])){
+					$pixelModel->delete($id);
+					$this->redirectToRoute('user_show', ['id' => $_SESSION['user']['id']]);
+				} elseif(isset($_POST['cancel'])){
+					$this->redirectToRoute('user_show', ['id' => $_SESSION['user']['id']]);
+				}
+
+				
+				$this->show('pixel/delete', ["pixel" => $pixel]);
+			} else {
+				$this->show('w_errors/404');
+			}
+		} else {
+			$this->redirectToRoute('user_inscription');
+		}
+	}
+
 	public function list()
 	{
 		$pixelModel = new PixelModel();

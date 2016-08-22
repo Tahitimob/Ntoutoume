@@ -46,6 +46,7 @@ $this->layout('layout', ['title' => $title]) ?>
 			</div>
 			<?php if(isset($_SESSION['user']) && $_SESSION['user']['id'] == $user['id']){?> 
 				<a href="<?= $this->url('pixel_edit', ['id' => $pixel['id']]) ?>" class="btn-edit" aria-label="Bouton d'édition"><span class=" glyphicon glyphicon-pencil"></span></a>
+        <a href="<?= $this->url('pixel_delete', ['id' => $pixel['id']]) ?>" class="btn-delete" aria-label="Bouton de suppression"><span class=" glyphicon glyphicon-trash"></span></a>
 			<?php }?>
 		</div>
 	<?php }} ?>
