@@ -28,6 +28,14 @@ body {
 .hidden-contact {
 	display: none;
 }
+
+.btn:focus, .btn:active {
+  outline: none;
+  background: transparent;
+  color:#7f8c8d;
+  border-color: #7f8c8d;
+}
+
 /************************************************************************************************/
 /********************************************LAYOUT**********************************************/
 /************************************************************************************************/
@@ -44,6 +52,7 @@ body {
 	border:0;
 	border-radius:0;
 	z-index: 9;
+	border-right: 1px solid #7f8c8d;
 
 }
 
@@ -78,6 +87,8 @@ body {
 	 .navbar-fixed-top {
 	background-color: rgba(52, 73, 94,0.5);
 	width: 100%;
+	position: fixed;
+	z-index: 8;
 	height:auto;
 	}
 	.responsive-logo{
@@ -104,7 +115,8 @@ body {
 	}
 
 	.hide-nav {
-		display: none;
+		position: relative;
+		z-index: 99;
 	}
 }
 
@@ -198,6 +210,8 @@ body {
 	border: 1px solid #7f8c8d;
 	border-radius: 0;
 	padding: 5px;
+	border-top: 0px;
+	border-left: 0px;
 }
 
 .hide-nav {
@@ -233,7 +247,7 @@ body {
 	font-family: 'Press Start 2P', cursive;
 	color:#7f8c8d;
 	font-size: 8em;
-	z-index: 9;
+	z-index: 6;
 	position: relative;
 
 }
@@ -365,13 +379,14 @@ body {
 /************************************************************************************************/
 
 .form {
-	padding-top: 10%;
+	padding-top: 5%;
 	color:#7f8c8d;
 	z-index: 2;
 }
 
 .wrap {
 	position: absolute;
+	left:8%;
 }
  #b {
  position: relative;
@@ -618,7 +633,9 @@ body {
 .glyphicon-pencil {
 	font-size: 3em;
 }
-
+.glyphicon-trash {
+	font-size: 3em;
+}
 .profil-pad {
   padding-right: 5%;
 
