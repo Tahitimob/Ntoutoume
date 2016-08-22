@@ -20,8 +20,17 @@
 				        	<td><?= $user['role']; ?></td>
 				        	<td>
 				          		<div class="btn-group" role="group">
-				            		<a class="btn btn-default btn-crud" href="<?= $this->url('user_show', ['id' => $user['id']]) ?>">Voir</a>
-				            		<a class="btn btn-default btn-crud" href="<?= $this->url('user_delete', ['id' => $user['id']]) ?>">Supprimer</a>
+								    <a class="btn btn-default btn-crud" href="<?= $this->url('user_show', ['id' => $user['id']]) ?>">Voir</a>
+								    <?php 
+								    // var_dump($_SESSION['user']['id']);
+									    // var_dump($user['id']);
+									    if ($_SESSION['user']['id'] != $user['id']) {//id session = id edit	
+									    	?>
+									    	<a class="btn btn-default btn-crud" href="<?= $this->url('user_delete', ['id' => $user['id']]) ?>">Supprimer</a>
+									    	<?php
+									    }
+								    ?>
+				            		
 				          		</div>
 				       		</td>
 				      	</tr>
