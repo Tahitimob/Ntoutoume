@@ -66,6 +66,8 @@ class UserController extends Controller
 			}else{
 				$this->show('user/delete/[i:id]', ['error' => "La suppression a échouée"]);//delete win mais fail redirect
 			}
+		}elseif (isset($_POST['cancel'])) {
+			$this->redirectToRoute('user_list');
 		}
 		$this->show('user/delete', ['user' => $user]);
 	}
