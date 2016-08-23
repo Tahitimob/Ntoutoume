@@ -2,11 +2,14 @@
 
 <?php $this->start('main_content') ?>
 
-<div><p>Voulez-vous vraiment supprimer le pixel art suivant :</p>
+<div class="mef form"><p class="text-color h3">Voulez-vous vraiment supprimer le pixel art suivant ?</p>
+	<br>
+	<br>
 <img src="<?= $this->assetUrl('img/pixelart/'.$pixel['url']); ?>" alt="pixelart"></div>
-<form method="POST">
-	<button name="delete">Supprimer</button>
-	<button name="cancel">Annuler</button>
+
+<form class="form delete-pixel-btn col-md-12" method="POST">
+	<button name="delete" class="btn btn-default btn-crud">Supprimer</button>
+	<button name="cancel" class="btn btn-default btn-crud">Annuler</button>
 </form>
 
 

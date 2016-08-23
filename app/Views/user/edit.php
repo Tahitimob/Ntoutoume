@@ -21,7 +21,7 @@ $this->layout('layout', ['title' => $title]) ?>
 				        </div>
 			        </tr>
 		        </table>
-		       <input type="submit" name="sauvegarder" value="sauvegarder" class="btn-contact">
+		       <input type="submit" name="sauvegarder" value="Sauvegarder" class="btn-contact h4">
 		       <?php
 				if (isset($error)) {
 					echo "<br>";
