@@ -9,4 +9,4 @@ Installation à domicile:
 
 
 Installation de Bower:
-- En étant à la racine du projet, effectuer un bower install boostrap et bower installs font-awesome
+- En étant à la racine du projet, effectuer un bower install boostrap et bower installs font-awesome (!Attention! Node.js et NPM nécessaire).
