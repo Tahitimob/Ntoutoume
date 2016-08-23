@@ -203,6 +203,10 @@ body {
 	border-color: #34495e;
 }
 
+.btn-contact-pos {
+	margin-left: 9%;
+}
+
 .btn-hide {
 	color:#7f8c8d;
 	font-family: 'Orbitron', sans-serif;

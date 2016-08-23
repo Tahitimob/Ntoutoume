@@ -80,7 +80,7 @@
 	    <div class="contact" id="contact">
 	    	
 	    	<!-- Button trigger modal -->
-		<button type="button" class="btn btn-primary btn-lg btn-contact" data-toggle="modal" data-target="#modal-contact">
+		<button type="button" class="btn btn-primary btn-lg btn-contact btn-contact-pos" data-toggle="modal" data-target="#modal-contact">
 		Contact
 		</button>
 
