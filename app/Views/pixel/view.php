@@ -8,10 +8,10 @@
 
 <div class="pages">
 	<?php if($prev['id']){ ?>
-		<a href="<?= $this->url('pixel_view', ['id' => intval($prev['id']) ]) ?>"><p>Pixel art précédent</p></a>
+		<a href="<?= $this->url('pixel_view', ['id' => intval($prev['id']) ]) ?>"><p><span class=" glyphicon glyphicon-arrow-left"></span>Pixel art précédent</p></a>
 	<?php } ?>
 	<?php if($next['id']){ ?>
-		<a href="<?= $this->url('pixel_view', ['id' => intval($next['id']) ]) ?>"><p>Pixel art suivant</p></a>
+		<a href="<?= $this->url('pixel_view', ['id' => intval($next['id']) ]) ?>"><p>Pixel art suivant<span class=" glyphicon glyphicon-arrow-right"></span></p></a>
 	<?php } ?>
 </div>
 <?php $this->stop('main_content') ?>
