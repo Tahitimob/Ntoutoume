@@ -45,6 +45,9 @@
 	        	<a href="<?= $this->url('user_list') ?>">¬Back Office</a>
 	        </li>
 	        <?php } ?>
+	        <li>
+	        	<a href="<?= $this->url('pixel_list') ?>">¬Pixel arts</a>
+	        </li>
 	        <?php if(isset($_SESSION['user'])){ ?>
 	        <li>
 	        	<a href="<?= $this->url('pixel_create') ?>">¬Création</a>

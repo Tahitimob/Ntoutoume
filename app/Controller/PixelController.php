@@ -87,6 +87,21 @@ class PixelController extends Controller
 		}
 	}
 	
+	public function view($id)
+	{
+		$pixelModel = new PixelModel();
+		$pixelModel->setTable('pixelart');
+		$count = count($pixelModel->findAll());
+		$pixel = $pixelModel->find($id);
+		$prev = $pixelModel->prev($id);
+		$next = $pixelModel->next($id);
+		if(isset($pixel['id'])){
+			$this->show('pixel/view', ['pixel' => $pixel, 'count' => $count, 'next' =>$next, 'prev' => $prev]);
+		} else{
+			$this->show('pixel/404');
+		}
+	}
+
 	public function edit($id)
 	{
 		if(isset($_SESSION['user'])){
@@ -137,12 +152,14 @@ class PixelController extends Controller
 		}
 	}
 
-	public function list()
+	public function list($page = 1)
 	{
 		$pixelModel = new PixelModel();
 		$pixelModel->setTable('pixelart');
 		$pixels = $pixelModel->findAll();
-		$this->show('pixel/list', ['pixels' =>$pixels]);
+		$nbPages = (count($pixels)/10)+1;
+		$pixels = $pixelModel->findAll("id", "ASC", 10, ($page-1)*10 );
+		$this->show('pixel/list', ['pixels' =>$pixels, 'nbPages' => $nbPages, 'page' => $page]);
 	}
 
 }
