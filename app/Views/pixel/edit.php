@@ -112,6 +112,7 @@
       </div>
     <form method="POST">
       <button class="submit btn-create"><h4>Editer</h4></button>
+      <button name="view" class="submit btn-create"><h4>Visualiser</h4></button>
     </form> 
   </div>
 </div>

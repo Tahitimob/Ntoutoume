@@ -7,7 +7,7 @@
 <?php foreach($pixels as $pixel) { ?>
 	<div class="pixelart">
 		<img src="<?= $this->assetUrl('img/pixelart/'); echo $pixel['url'] ?>" alt="pixelart<?= $pixel['id']?>">
-		<a href="<?= $this->url('pixel_view', ['id' => $pixel['id']]) ?>" class="btn-edit" aria-label="Bouton d'édition"><span class=" glyphicon glyphicon-eye-open"></span></a>
+		<a href="<?= $this->url('pixel_view', ['id' => $pixel['id']]) ?>" class="btn-edit" aria-label="Bouton de visualisation"><span class=" glyphicon glyphicon-eye-open"></span></a>
 	</div>
 
 

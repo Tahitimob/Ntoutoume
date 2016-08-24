@@ -114,7 +114,11 @@ class PixelController extends Controller
 					$pixelart->arrayToString($_POST['colors']);
 					$pixelart->setData($_SESSION['user']['id']);
 					$pixel = $pixelModel->update($pixelart->getData(), $id);
-					$this->redirectToRoute('pixel_create_image', ['id' => $id]);
+					if(isset($_POST['view'])){
+						$this->redirectToRoute('pixel_view', ['id' => $id]);
+					} else {
+						$this->redirectToRoute('pixel_create_image', ['id' => $id]);
+					}
 				}
 
 				$this->show('pixel/edit', ['pixel' => $pixelart]);
