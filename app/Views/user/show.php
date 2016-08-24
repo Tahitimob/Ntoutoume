@@ -6,7 +6,7 @@ $this->layout('layout', ['title' => $title]) ?>
 
 <div class="mef form">
   <hr class="hr">
-    <div class="container text-color profil-pad">
+    <div class="container-fluid text-color profil-pad">
     <h2 class="title-crea">Profils</h2>
     <div class="form-group col-md-6 col-md-offset-3">
       <form action="<?= $this->url('user_edit', ['id' => $_SESSION['user']['id']]) ?>" method="POST">
@@ -36,7 +36,7 @@ $this->layout('layout', ['title' => $title]) ?>
   <div class="vr2">&nbsp;</div>
 </div>
 <hr class="hr">
-<div class="container">
+<div class="container-fluid">
 <div id="listpixel">
 
 	<?php foreach($pixels as $pixel) { 

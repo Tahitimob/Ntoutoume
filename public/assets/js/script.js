@@ -126,8 +126,10 @@ $(function(){
 	$('body').on('click', '.hide-nav', function(){
 		var iWindowsSize = $(window).innerWidth();
 		if($('.hide-nav').html() == "¬Hide¬"){
+			$('.main').removeClass('col-md-10').addClass('col-md-12');
 			$('.hide-nav').html("¬Show¬");
 		}else{
+			$('.main').removeClass('col-md-12').addClass('col-md-10');
 			$('.hide-nav').html("¬Hide¬");
 		}
 		if(iWindowsSize < 1007){

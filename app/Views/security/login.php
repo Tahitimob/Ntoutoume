@@ -2,7 +2,7 @@
 
 <?php $this->start('main_content') ?>
 <div class="mef form">
-  <div class="container">
+  <div class="container-fluid">
     <h2 class="text-color">Connectez-vous dès maintenant</h2>
     <div class="form-group col-md-6 col-md-offset-3">
       <form method="POST" action="<?= $this->url('security_login') ?>">
