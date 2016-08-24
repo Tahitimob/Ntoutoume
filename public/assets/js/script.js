@@ -105,16 +105,16 @@ $(function(){
 
 
 
-	var iWindowsSize = $(window).width();
-	if (iWindowsSize  < 1024){
+	var iWindowsSize = $(window).innerWidth();
+	if (iWindowsSize  < 1007){
  		if($('nav').hasClass('navbar-fixed-left')){
  			$('nav').removeClass('navbar-fixed-left');
  		}
 	}
 	// Passage du menu au top sous 1024px
 	$(window).resize(function(){
-		var iWindowsSize = $(window).width();
-		if (iWindowsSize  < 1024){
+		var iWindowsSize = $(window).innerWidth();
+		if (iWindowsSize  < 1007){
 	 		if($('nav').hasClass('navbar-fixed-left')){
 	 			$('nav').removeClass('navbar-fixed-left');
 	 		}
@@ -124,13 +124,13 @@ $(function(){
 	});
 	// Toggle du menu
 	$('body').on('click', '.hide-nav', function(){
-		var iWindowsSize = $(window).width();
+		var iWindowsSize = $(window).innerWidth();
 		if($('.hide-nav').html() == "¬Hide¬"){
 			$('.hide-nav').html("¬Show¬");
 		}else{
 			$('.hide-nav').html("¬Hide¬");
 		}
-		if(iWindowsSize < 1024){
+		if(iWindowsSize < 1007){
 			$('.navbar-fixed-top').toggle(400);
 		}else{
 			$('.navbar-fixed-left').toggle(400);
