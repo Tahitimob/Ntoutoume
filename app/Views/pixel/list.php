@@ -1,7 +1,7 @@
 <?php $this->layout('layout', ['title' => "Pix'Hell"]) ?>
 
 <?php $this->start('main_content') ?>
-<div class="container mef">
+<div class="mef">
 
 
 <?php foreach($pixels as $pixel) { ?>
