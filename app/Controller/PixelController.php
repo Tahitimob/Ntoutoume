@@ -161,7 +161,8 @@ class PixelController extends Controller
 		$pixelModel = new PixelModel();
 		$pixelModel->setTable('pixelart');
 		$pixels = $pixelModel->findAll();
-		$nbPages = (count($pixels)/10)+1;
+		$nbPages = ceil(count($pixels) /10.0);
+		
 		$pixels = $pixelModel->findAll("id", "ASC", 10, ($page-1)*10 );
 		$this->show('pixel/list', ['pixels' =>$pixels, 'nbPages' => $nbPages, 'page' => $page]);
 	}
