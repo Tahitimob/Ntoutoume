@@ -3,9 +3,11 @@
 	$w_routes = array(
 		['GET|POST', '/', 'Default#home', 'default_home'], //page d'accueil
 		
-		['GET|POST', '/user', 'User#list', 'user_list'], //liste des utilisateurs en back office
 		['GET|POST', '/user/[i:id]', "User#affiche", "user_show"], //données d'un utilisateur 
 		['GET|POST', '/user/edit/[i:id]', "User#edit", "user_edit"], //edition de profil
+
+		['GET|POST', '/user', 'User#list', 'user_list'], //liste des utilisateurs en back office
+		['GET|POST', '/user/admin_add', 'User#admin_add', 'user_admin_add'], //liste des utilisateurs en back office
 		['GET|POST', '/user/delete/[i:id]', "User#admin_delete", "user_delete"], //suppression de compte par un admin
 
 		['GET|POST', '/inscription', 'User#inscription', 'user_inscription'], //page d'inscription

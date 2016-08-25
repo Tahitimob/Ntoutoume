@@ -72,6 +72,44 @@ class UserController extends Controller
 		$this->show('user/delete', ['user' => $user]);
 	}
 
+	public function admin_add() {
+		if (isset($_POST['add'])) {
+			$password = $_POST['password'];			
+			$cf_password = $_POST['cf-password'];
+
+			if (!empty($_POST['username']) && !empty($_POST['email']) && !empty($password) && !empty($cf_password)) {
+				if ($password == $cf_password) {
+					$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+					$table_user = array('username' => $_POST['username'], 'email' => $_POST['email'], 'password' => $password, 'role' => 'admin');
+					$user = new UserModel();
+					$user->setTable('users');
+					$testMail = $user->getUserByUsernameOrEmail($_POST['email']);
+					$testUsername = $user->getUserByUsernameOrEmail($_POST['username']);
+					if($testMail['id'] || $testUsername['id']){
+						$this->show('user/admin_add', ['error' => "L'email ou le pseudo existe déjà"]);
+					} else {
+						$User1 = $user->insert($table_user);
+						if (!empty($User1)) {
+							$auth = new Auth();
+							$auth->logUserIn($User1);
+							$this->redirectToRoute('default_home');
+						}else{
+							$this->show('user/admin_add', ['error' => "L'ajout a échouée"]);
+						}	
+					}
+				}else{
+					$this->show('user/admin_add', ['error' => "L'ajout a échouée, le mot de passe et sa confirmation sont différents"]);
+					// var_dump("L'ajout a échouée, le mot de passe et sa confirmation sont différents");
+				}
+			}else{
+				$this->show('user/admin_add', ['error' => "L'ajout a échouée, au moins un champ est vide"]);
+				// var_dump("L'ajout a échouée, le mot de passe et sa confirmation sont différents");
+			}				
+
+		}
+		$this->show('user/admin_add');
+	}
+
 	public function affiche($id)
 	{
 		$user = new UserModel();

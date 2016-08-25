@@ -10,6 +10,7 @@
 	        		<td>Username</td>
 	        		<td>Email</td>
 	        		<td>Role</td>
+	        		<td><a class="btn btn-default btn-crud" href="<?= $this->url('user_admin_add') ?>">Ajouter un admin</a></td>
 	      		</tr>
 	      	</div>
 			<?php foreach ($users as $user): ?>
