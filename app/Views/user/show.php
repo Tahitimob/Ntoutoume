@@ -13,12 +13,12 @@ $this->layout('layout', ['title' => $title]) ?>
         <hr class="hr">
         <div class="form-group">
           <div class="vr3">&nbsp;</div>
-          <label>Nom d'utilisateur :</label>
-          <label><?= $user['username']?></label>
+          <label class="h4">Nom d'utilisateur :</label>
+          <label class="h4"><?= $user['username']?></label>
         </div>
         <div class="form-group">
-          <label>Email :</label>
-          <label><?= $user['email']?></label>
+          <label class="h4">Email :</label>
+          <label class="h4"><?= $user['email']?></label>
         </div>
         <?php 
           // var_dump($_SESSION['user']['id']);

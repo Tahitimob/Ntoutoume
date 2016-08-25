@@ -1,7 +1,7 @@
 <?php $this->layout('layout', ['title' => "Utilisateurs - Pix'Hell"]) ?>
 
 <?php $this->start('main_content') ?>
-<div class="container form">
+<div class="container-fluid form">
 	<h2 class="title-crea">Liste des utilisateurs</h2>
 		<table class="table text-color">
 	      		<tr>

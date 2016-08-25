@@ -8,11 +8,11 @@
 }</style>
 <div id="creation" class="mef">
   <hr class="hr">
-  <div class="container">
+  <div class="container-fluid">
     <div class="title-crea">
       <p>Edition</p>
     </div>
-    <div class="container">
+    <div class="container-fluid">
         <div class="col-md-4">
            <div class="color_picker">
            <p class="text-color"> < Rectangle Color ></p>
@@ -103,7 +103,7 @@
           </div>
         </div>
       
-      <div class="container">
+      <div class="container-fluid">
        <br>
         <?php
         echo $pixel->create();

@@ -6,13 +6,14 @@
 	width: 50px;
 	height: 50px;
 }</style>
-<div id="creation" class="mef">
+<div id="creation" class="mef1">
   <hr class="hr">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="title-crea">
-			<p>A VOS SOURIS!</p>
+			<p class="text-center">A VOS SOURIS!</p>
 		</div>
-		<div class="container">
+    <h3 class="achtung">Attention ! La taille de votre écran ne permet pas la création dans de bonnes conditions.</h3>
+		<div class="container-fluid">
   			<div class="col-md-4">
   				 <div class="color_picker">
 					 <p class="text-color"> < Rectangle Color ></p>
@@ -53,57 +54,57 @@
   				<p class="text-color placement"> < Couleurs Prédéfinies > </p>
   				<div class="row box-placement">
   					<p class="text-color title-color-placement">Rouge</p>
-  					<div class="col-md-2 box red1"></div>
-  					<div class="col-md-2 box red2"></div>
-  					<div class="col-md-2 box red3"></div>
-  					<div class="col-md-2 box red4"></div>
-  					<div class="col-md-2 box red5"></div>
-  					<div class="col-md-2 box red6"></div>
+  					<div class="col-xs-2 box red1"></div>
+  					<div class="col-xs-2 box red2"></div>
+  					<div class="col-xs-2 box red3"></div>
+  					<div class="col-xs-2 box red4"></div>
+  					<div class="col-xs-2 box red5"></div>
+  					<div class="col-xs-2 box red6"></div>
   				</div>
   				<div class="row box-placement">
   					<p class="text-color title-color-placement">Bleu</p>
-  					<div class="col-md-2 box blue1"></div>
-  					<div class="col-md-2 box blue2"></div>
-  					<div class="col-md-2 box blue3"></div>
-  					<div class="col-md-2 box blue4"></div>
-  					<div class="col-md-2 box blue5"></div>
-  					<div class="col-md-2 box blue6"></div>
+  					<div class="col-xs-2 box blue1"></div>
+  					<div class="col-xs-2 box blue2"></div>
+  					<div class="col-xs-2 box blue3"></div>
+  					<div class="col-xs-2 box blue4"></div>
+  					<div class="col-xs-2 box blue5"></div>
+  					<div class="col-xs-2 box blue6"></div>
   				</div>
   				<div class="row box-placement">
   					<p class="text-color title-color-placement">Vert</p>
-  					<div class="col-md-2 box green1"></div>
-  					<div class="col-md-2 box green2"></div>
-  					<div class="col-md-2 box green3"></div>
-  					<div class="col-md-2 box green4"></div>
-  					<div class="col-md-2 box green5"></div>
-  					<div class="col-md-2 box green6"></div>
+  					<div class="col-xs-2 box green1"></div>
+  					<div class="col-xs-2 box green2"></div>
+  					<div class="col-xs-2 box green3"></div>
+  					<div class="col-xs-2 box green4"></div>
+  					<div class="col-xs-2 box green5"></div>
+  					<div class="col-xs-2 box green6"></div>
   				</div>
   				<div class="row box-placement">
   					<p class="text-color title-color-placement">Jaune</p>
-  					<div class="col-md-2 box yellow1"></div>
-  					<div class="col-md-2 box yellow2"></div>
-  					<div class="col-md-2 box yellow3"></div>
-  					<div class="col-md-2 box yellow4"></div>
-  					<div class="col-md-2 box yellow5"></div>
-  					<div class="col-md-2 box yellow6"></div>
+  					<div class="col-xs-2 box yellow1"></div>
+  					<div class="col-xs-2 box yellow2"></div>
+  					<div class="col-xs-2 box yellow3"></div>
+  					<div class="col-xs-2 box yellow4"></div>
+  					<div class="col-xs-2 box yellow5"></div>
+  					<div class="col-xs-2 box yellow6"></div>
   				</div>
   				<div class="row box-placement">
   					<p class="text-color title-color-placement">Noir</p>
-  					<div class="col-md-3 box black1"></div>
-  					<div class="col-md-3 box black2"></div>
-  					<div class="col-md-3 box black3"></div>
-  					<div class="col-md-3 box black4"></div>
+  					<div class="col-xs-3 box black1"></div>
+  					<div class="col-xs-3 box black2"></div>
+  					<div class="col-xs-3 box black3"></div>
+  					<div class="col-xs-3 box black4"></div>
   				</div>
   				<div class="row box-placement">
   					<p class="text-color title-color-placement">Blanc</p>
-  					<div class="col-md-3 box white1"></div>
-  					<div class="col-md-3 box white2"></div>
-  					<div class="col-md-3 box white3"></div>
-  					<div class="col-md-3 box white4"></div>
+  					<div class="col-xs-3 box white1"></div>
+  					<div class="col-xs-3 box white2"></div>
+  					<div class="col-xs-3 box white3"></div>
+  					<div class="col-xs-3 box white4"></div>
   				</div>
   			</div>
       
-			<div class="container">
+			<div class="container-fluid">
 			 <br>
 				<?php
 				echo $pixel->create();

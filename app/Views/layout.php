@@ -19,7 +19,7 @@
 	
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-2">
+			<div>
 				<nav class="navbar navbar-default navbar-fixed-top navbar-fixed-left">
 				  	<div class="container-fluid">
 				    <!-- Brand and toggle get grouped for better mobile display -->
@@ -142,7 +142,7 @@
 				  </div><!-- /.container-fluid -->
 				</nav>
 			</div>
-			<div class="col-md-10 main">
+			<div class="col-md-10 col-md-offset-2 main">
 				<section  class="text-center">
 					<?= $this->section('main_content') ?>
 				</section>
