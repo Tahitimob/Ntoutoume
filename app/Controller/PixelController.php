@@ -156,7 +156,7 @@ class PixelController extends Controller
 		}
 	}
 
-	public function list($page = 1)
+	public function liste($page = 1)
 	{
 		$pixelModel = new PixelModel();
 		$pixelModel->setTable('pixelart');

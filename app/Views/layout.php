@@ -92,7 +92,7 @@
 					</button>
 					<div class="text-color signature">
 						<h4>Pixélisé par : </h4>
-						<h5>Halim De ille</h5>
+						<h5>Halim De Ville</h5>
 						<h5>Samuel Canivez</h5>
 						<h5>Thibaut Desramé</h5>
 					</div>

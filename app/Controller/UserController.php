@@ -9,7 +9,7 @@ use \Model\PixelModel;
 
 class UserController extends Controller
 {
-	public function list()
+	public function liste()
 	{
 		// $loggedUser = $this->getUser();
 		// var_dump($loggedUser);
