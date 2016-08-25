@@ -16,16 +16,16 @@ $this->layout('layout', ['title' => $title]) ?>
           <label class="h4">Nom d'utilisateur :</label>
           <label class="h4"><?= $user['username']?></label>
         </div>
-        <div class="form-group">
-          <label class="h4">Email :</label>
-          <label class="h4"><?= $user['email']?></label>
-        </div>
         <?php 
           // var_dump($_SESSION['user']['id']);
           // var_dump($user['id']);
 
           if ($_SESSION['user']['id'] == $user['id']) {//id session = id edit
             ?>
+        <div class="form-group">
+          <label class="h4">Email :</label>
+          <label class="h4"><?= $user['email']?></label>
+        </div>
             <input class ="btn-crud" type="submit" name="edit" value="EDITER">
             <?php
           }

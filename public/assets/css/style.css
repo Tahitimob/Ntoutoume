@@ -6,6 +6,10 @@ body {
 	font-size: 1em;
 }
 
+.bold {
+	font-weight:bold;
+}
+
 .mef {
 	margin-right: 16%; 
 }

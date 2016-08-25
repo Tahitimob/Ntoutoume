@@ -4,12 +4,14 @@
 <div class="container-fluid form">
 	<h2 class="title-crea">Liste des utilisateurs</h2>
 		<table class="table text-color">
-	      		<tr>
-	        		<th>#</th>
-	        		<th>Username</th>
-	        		<th>Email</th>
-	        		<th>Role</th>
+			<div class="row">
+	      		<tr class="bold">
+	        		<td>#</td>
+	        		<td>Username</td>
+	        		<td>Email</td>
+	        		<td>Role</td>
 	      		</tr>
+	      	</div>
 			<?php foreach ($users as $user): ?>
 				<div class="row">
 					<div class="">
