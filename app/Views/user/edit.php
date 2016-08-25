@@ -11,13 +11,13 @@ $this->layout('layout', ['title' => $title]) ?>
 					<tr>
 				        <div class="form-group">
 				    	    <td><label><?= $user['username']?></label></td>
-				          	<td><input type="text" name="username" placeholder="New Username"></td>
+				          	<td><input type="text" name="username" placeholder="Nouveau nom d'utilisateur"></td>
 				        </div>
 			        </tr>
 			        <tr>
 				        <div class="form-group">
 				        	<td><label><?= $user['email']?></label></td>
-				          	<td><input type="email" name="email" placeholder="New Email"></td>
+				          	<td><input type="email" name="email" placeholder="Nouvel Email"></td>
 				        </div>
 			        </tr>
 		        </table>

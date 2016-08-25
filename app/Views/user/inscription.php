@@ -17,11 +17,11 @@
 				<input type="email" class="form-control" name="email" placeholder="Email" id="email">
 			</div>
 			<div class="form-group">
-				<label for="password">Password :</label>
+				<label for="password">Mot de passe :</label>
 				<input type="password" class="form-control" name="password" placeholder="Mot de passe" id="password">
 			</div>
 			<div class="form-group">
-				<label for="cf-password">Confirmation password :</label>
+				<label for="cf-password">Confirmation du Mot de passe :</label>
 				<input type="password" class="form-control" name="cf-password" placeholder="Confimation du mot de passe" id="cf-password">
 			</div>
 		<button name="register" class="btn btn-default btn-inscription">S'inscire</button>
