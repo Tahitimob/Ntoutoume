@@ -102,13 +102,19 @@ class UserController extends Controller
 					$table_user = array('username' => $_POST['username'], 'email' => $_POST['email'], 'password' => $password, 'role' => 'user');
 					$user = new UserModel();
 					$user->setTable('users');
-					$User1 = $user->insert($table_user);
-					if (!empty($User1)) {
-						$auth = new Auth();
-						$auth->logUserIn($User1);
-						$this->redirectToRoute('default_home');
-					}else{
-						$this->show('user/inscription', ['error' => "L'inscription a échouée"]);
+					$testMail = $user->getUserByUsernameOrEmail($_POST['email']);
+					$testUsername = $user->getUserByUsernameOrEmail($_POST['username']);
+					if($testMail['id'] || $testUsername['id']){
+						$this->show('user/inscription', ['error' => "L'email ou le pseudo existe déjà"]);
+					} else {
+						$User1 = $user->insert($table_user);
+						if (!empty($User1)) {
+							$auth = new Auth();
+							$auth->logUserIn($User1);
+							$this->redirectToRoute('default_home');
+						}else{
+							$this->show('user/inscription', ['error' => "L'inscription a échouée"]);
+						}	
 					}
 				}else{
 					$this->show('user/inscription', ['error' => "L'inscription a échouée, le mot de passe et sa confirmation sont différents"]);
