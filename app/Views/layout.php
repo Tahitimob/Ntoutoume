@@ -90,6 +90,12 @@
 					<button type="button" class="btn btn-primary btn-lg btn-contact btn-contact-pos" data-toggle="modal" data-target="#modal-contact">
 					Contact
 					</button>
+					<div class="text-color signature">
+						<h4>Pixélisé par : </h4>
+						<h5>Halim Deville</h5>
+						<h5>Samuel Canivez</h5>
+						<h5>Thibaut Desramé</h5>
+					</div>
 
 					<!-- Modal -->
 						<div class="modal" id="modal-contact" tabindex="1" role="dialog" aria-labelledby="myModalContact">

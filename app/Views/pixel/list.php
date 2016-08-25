@@ -3,7 +3,7 @@
 <?php $this->start('main_content') ?>
 <div class=" form mef1">
 
-	<h2 class="text-color">Voici les Pixel-Arts déja crées !</h2>
+	<h2 class="text-color">Voici les Pixel-Art déja crées !</h2>
 	<br>
 	<h4 class="text-color">A vous de jouer!</h4>
 	<br>
@@ -24,13 +24,13 @@
 <div class="pages text-color">
 	<div class="placement-page-list">
 		<?php if($page >1){ ?>
-			<a style="display:inline-block" href="<?= $this->url('pixel_list', ['page' => ($page-1)]) ?>"><p class="h4 colorabestos"><span class=" glyphicon glyphicon-arrow-left"></span>Page précédente</p></a>
+			<a style="display:inline-block" href="<?= $this->url('pixel_list', ['page' => ($page-1)]) ?>"><p class="h4 colorabestos"><span class=" glyphicon glyphicon-arrow-left"></span></p></a>
 		<?php } ?>
 	 	<?php for($i = max(1, $page-3); $i <= min($nbPages , $page +3) ; $i++ ){?>
 			<a style="display:inline-block" href="<?= $this->url('pixel_list', ['page' => $i]) ?>"><p class="h4 colorabestos"><?= $i ?></p></a>
 		<?php } ?>
 		<?php if($page < $nbPages){ ?>
-			<a style="display:inline-block" href="<?= $this->url('pixel_list', ['page' => ($page+1)]) ?>"><p class="h4 colorabestos">Page suivante<span class=" glyphicon glyphicon-arrow-right"></span></p></a>
+			<a style="display:inline-block" href="<?= $this->url('pixel_list', ['page' => ($page+1)]) ?>"><p class="h4 colorabestos"><span class=" glyphicon glyphicon-arrow-right"></span></p></a>
 		<?php } ?>
 	</div>
 </div>

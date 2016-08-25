@@ -3,6 +3,7 @@
 <?php $this->start('main_content') ?>
 <div class="pixelart pos">
 	<img src="<?= $this->assetUrl('img/pixelart/'); echo $pixel['url'] ?>" alt="pixel art <?= $pixel['id']?>">
+	<a href="<?= $this->assetUrl('img/pixelart/'); echo $pixel['url'] ?>" download="<?= $pixel['id']?>" class="text-color-dl">Téléchargement</a>
 </div>
 
 

@@ -55,8 +55,33 @@ body {
 }
 .colorabestos:hover {
 	color: #ecf0f1;
-	text-decoration: none;
+	text-decoration: underline;
+	
 }
+
+.signature {
+	position: relative;
+	z-index: 7;
+	margin-top: 25%;
+	border-top: 1px solid #7f8c8d;
+	border-bottom: 1px solid #7f8c8d;
+
+}
+
+.text-color-dl {
+	font-family: 'Orbitron', sans-serif;
+	color:#7f8c8d;
+	text-decoration: none;
+	border-top: 1px solid #7f8c8d;
+	border-left: 1px solid #7f8c8d;
+    border-right: 1px solid #7f8c8d;
+    border-bottom: 1px solid #7f8c8d;
+    padding: 5px;
+}
+.text-color-dl:hover {
+	color: #ecf0f1;
+}
+
 /************************************************************************************************/
 /********************************************LAYOUT**********************************************/
 /************************************************************************************************/
@@ -110,7 +135,7 @@ body {
 	background-color: #34495e;
 	color:#7f8c8d;
 	position: relative;
-	top:250px;
+	top:300px;
 	font-family: 'Orbitron', sans-serif;
 	padding: 25px;
 }
@@ -161,6 +186,9 @@ body {
     top: 0;
     left: 0%;
     z-index: 10;
+}
+.hide-nav:hover {
+	    color: #ecf0f1;
 }
 
 
@@ -787,6 +815,9 @@ body {
 	}
 	#wrapper {
 		margin-left: 0;
+	}
+	.signature {
+		display: none;
 	}
 }
 
