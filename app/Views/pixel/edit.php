@@ -12,7 +12,7 @@
     <div class="title-crea">
       <p>Edition</p>
     </div>
-    <h3 class="text-danger">Attention ! La taille de votre écran ne permet pas la création dans de bonnes conditions.</h3>
+    <h3 class="text-danger bg-danger">Attention ! La taille de votre écran ne permet pas la création dans de bonnes conditions.</h3>
     <div class="container-fluid">
         <div class="col-md-4">
            <div class="color_picker">
