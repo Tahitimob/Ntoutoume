@@ -22,14 +22,16 @@
 <?php } ?>
 </div>
 <div class="pages text-color">
-	<?php if($page >1){ ?>
-		<a href="<?= $this->url('pixel_list', ['page' => ($page-1)]) ?>"><p><span class=" glyphicon glyphicon-arrow-left"></span>Page précédente</p></a>
-	<?php } ?>
- 	<?php for($i = max(1, $page-3); $i <= min($nbPages , $page +3) ; $i++ ){?>
-		<a href="<?= $this->url('pixel_list', ['page' => $i]) ?>"><p><?= $i ?></p></a>
-	<?php } ?>
-	<?php if($page < $nbPages){ ?>
-		<a href="<?= $this->url('pixel_list', ['page' => ($page+1)]) ?>"><p>Page suivante<span class=" glyphicon glyphicon-arrow-right"></span></p></a>
-	<?php } ?>
+	<div class="placement-page-list">
+		<?php if($page >1){ ?>
+			<a style="display:inline-block" href="<?= $this->url('pixel_list', ['page' => ($page-1)]) ?>"><p class="h4 colorabestos"><span class=" glyphicon glyphicon-arrow-left"></span>Page précédente</p></a>
+		<?php } ?>
+	 	<?php for($i = max(1, $page-3); $i <= min($nbPages , $page +3) ; $i++ ){?>
+			<a style="display:inline-block" href="<?= $this->url('pixel_list', ['page' => $i]) ?>"><p class="h4 colorabestos"><?= $i ?></p></a>
+		<?php } ?>
+		<?php if($page < $nbPages){ ?>
+			<a style="display:inline-block" href="<?= $this->url('pixel_list', ['page' => ($page+1)]) ?>"><p class="h4 colorabestos">Page suivante<span class=" glyphicon glyphicon-arrow-right"></span></p></a>
+		<?php } ?>
+	</div>
 </div>
 <?php $this->stop('main_content') ?>

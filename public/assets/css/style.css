@@ -43,6 +43,20 @@ body {
   border-color: #7f8c8d;
 }
 
+.glyphicon {
+	color:#7f8c8d; 
+}
+.glyphicon:hover {
+	color: #ecf0f1;
+}
+.colorabestos {
+	color:#7f8c8d;
+	text-decoration: none;
+}
+.colorabestos:hover {
+	color: #ecf0f1;
+	text-decoration: none;
+}
 /************************************************************************************************/
 /********************************************LAYOUT**********************************************/
 /************************************************************************************************/
@@ -70,7 +84,9 @@ body {
 	color:#7f8c8d;
 	font-family: 'Orbitron', sans-serif;
 	font-size: 2em;
-
+}
+.navbar-default .navbar-nav>li>a:hover {
+	color:#ecf0f1;
 }
 .navbar-brand {
 	padding:0;
@@ -610,6 +626,9 @@ body {
 	padding: 50px;
 }
 
+#listpixel {
+	margin-right: 10%;
+}
 /************************************************************************************************/
 /*****************************************LISTE UTILISATEURS*************************************/
 /************************************************************************************************/
@@ -625,7 +644,7 @@ body {
 	font-size: 3em;
 }
 .profil-pad {
-  padding-right: 5%;
+  padding-right: 0%;
 
 }
 
@@ -647,7 +666,35 @@ body {
 	padding-left: 5%;
 }
 
-/***** RESPONSIVE **/
+/************************************************************************************************/
+/*****************************************VUES PIXELART******************************************/
+/************************************************************************************************/
+.pos {
+	margin-top: 15%;
+    margin-right: 20%;
+
+}
+
+.pages {
+	color:#7f8c8d;
+}
+
+.placement-page {
+    margin-right: 18%;
+
+}
+
+.placement-page-list {
+	margin-right: 11%;
+	text-decoration: none;
+	color:#7f8c8d;
+}
+.placement-page-list a:hover{
+	color:#ecf0f1;
+}
+/************************************************************************************************/
+/*****************************************RESPONSIVE*********************************************/
+/************************************************************************************************/
 
 /* Medium devices (desktops, 1024px and up) */
 @media screen and (max-width: 1024px){ 
@@ -691,6 +738,10 @@ body {
 	
 	.achtung {
 		display:block;
+	}
+
+	#listpixel {
+    margin-right: 6%;
 	}
 
 }
@@ -745,4 +796,14 @@ body {
 		font-size: 0.3em;
 	}
 
+}
+
+@media screen and (max-width: 1024px){
+	.hidden-contact a {
+		color: #7f8c8d;
+    	text-decoration: none;
+	}
+	.hidden-contact a:hover{
+		color: #ecf0f1;
+	}
 }
