@@ -2,4 +2,7 @@
 
 <?php $this->start('main_content'); ?>
 <h1>403. Nothing to see here.</h1>
+<audio controls autoplay style="display:none;">
+  <source src="<?= $this->assetUrl("audio/rickroll.mp3")?>" type="audio/mpeg">
+</audio>
 <?php $this->stop('main_content'); ?>
