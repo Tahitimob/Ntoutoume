@@ -15,6 +15,9 @@
 		<div class="pixelart">
 			<img src="<?= $this->assetUrl('img/pixelart/'); echo $pixel['url'] ?>" alt="pixelart<?= $pixel['id']?>">
 			<a href="<?= $this->url('pixel_view', ['id' => $pixel['id']]) ?>" class="btn-edit" aria-label="Bouton de visualisation"><span class=" glyphicon glyphicon-eye-open"></span></a>
+			<?php if(isset($_SESSION['user']) && $_SESSION['user']['role'] == "admin") { ?>
+			<a href="<?= $this->url('pixel_delete', ['id' => $pixel['id']]) ?>" class="btn-delete" aria-label="Bouton de supression"><span class=" glyphicon glyphicon-trash"></span></a>
+			<?php } ?>
 		</div>
 
 

@@ -137,7 +137,7 @@ class PixelController extends Controller
 			$pixelModel = new PixelModel();
 			$pixelModel->setTable('pixelart');
 			$pixel = $pixelModel->find($id);
-			if(isset($pixel['id']) && $pixel['idUser'] == $_SESSION['user']['id']){
+			if(isset($pixel['id']) && ($pixel['idUser'] == $_SESSION['user']['id'] || $_SESSION['user']['role'] == "admin") ){
 				
 				if(isset($_POST['delete'])){
 					$pixelModel->delete($id);
@@ -149,7 +149,7 @@ class PixelController extends Controller
 				
 				$this->show('pixel/delete', ["pixel" => $pixel]);
 			} else {
-				$this->show('w_errors/404');
+				$this->show('w_errors/403');
 			}
 		} else {
 			$this->redirectToRoute('user_inscription');
