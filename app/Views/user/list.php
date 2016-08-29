@@ -1,4 +1,4 @@
-<?php $this->layout('layout', ['title' => "Utilisateurs - Pix'Hell"]) ?>
+a<?php $this->layout('layout', ['title' => "Utilisateurs - Pix'Hell"]) ?>
 
 <?php $this->start('main_content') ?>
 <div class="container-fluid form">
@@ -43,3 +43,5 @@
 	  	</table>
 	</div>
 <?php $this->stop('main_content') ?>
+
+
