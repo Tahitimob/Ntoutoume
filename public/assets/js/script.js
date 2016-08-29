@@ -17,11 +17,32 @@ $(function(){
 		})
 	})
 
+	function fillup(elt){
+		var samecolor = elt.css('background-color');
+		var id = parseInt(elt.attr('data-id'));
+		var couleur = $('.jscolor').css('background-color');
+		elt.css( "background-color", couleur);
+		if(id > 30 && ($('[data-id='+(id-30)+']').css('background-color') == samecolor) ) {
+			fillup($('[data-id='+(id-30)+']'));
+		}
+		if(id > 1 && (id % 30 != 1) && ($('[data-id='+(id-1)+']').css('background-color') == samecolor) ) {
+			fillup($('[data-id='+(id-1)+']'));
+		}
+		if(id < 900 && (id % 30 != 0) && ($('[data-id='+(id+1)+']').css('background-color') == samecolor) ) {
+			fillup($('[data-id='+(id+1)+']'));
+		}
+		if(id <= (30*30)-30 && ($('[data-id='+(id+30)+']').css('background-color') == samecolor)){
+			fillup($('[data-id='+(id+30)+']'));
+		}
 
+		
+	}
 	//Différents évènements pour changer les couleurs du pixelart
 	var hover = false;
 	var picker = false;
 	var erase = false;
+	var fill = false;
+
 	$('body').on('mousedown', '.case', function(e){
 	   	e.preventDefault();
 		hover = true;
@@ -33,16 +54,18 @@ $(function(){
 		if(picker){
 			var couleur = $(this).css('background-color');
 			$('.jscolor').css( "background-color", couleur);
-			console.log(couleur);
+			//console.log(couleur);
 		} else if(erase){
 			var couleur = "rgb(255,255,255)";
 			$(this).css( "background-color", couleur);
-			console.log(couleur);
+			//console.log(couleur);
+		} else if(fill){
+			fillup($(this));
 		}
 		else {
 			var couleur = $('.jscolor').css('background-color');
 			$(this).css( "background-color", couleur);
-			console.log(couleur);	 	
+			//console.log(couleur);	 	
 		}
 	})
 	.on('mouseup', function(){
@@ -53,16 +76,24 @@ $(function(){
 			hover = true;
 			picker = false;
 			erase = false;
+			fill = false;
 		} else if(e.keyCode == 83){
 			hover = false;
 			picker = true;
 			erase = false;
+			fill = false;
 		} else if(e.keyCode == 71){
 			hover = false;
 			picker = false;
 			erase = true;
+			fill = false;
+		} else if(e.keyCode == 70){
+			hover = false;
+			picker = false;
+			erase = false;
+			fill = true;
 		}
-		console.log(e.keyCode);
+		//console.log(e.keyCode);
 	})
 	.on('keyup', function(e){
 		if(e.keyCode == 65){
@@ -71,25 +102,27 @@ $(function(){
 			picker = false;
 		} else if(e.keyCode == 71){
 			erase = false;
+		} else if(e.keyCode == 70){
+			fill = false;
 		}
-		console.log(e.keyCode);
+		//console.log(e.keyCode);
 	})
 	.on('mouseover', '.case', function(){
 		if(hover){
 			var couleur = $('.jscolor').css('background-color');
 			$(this).css( "background-color", couleur);
-			console.log(couleur);
+			//console.log(couleur);
 		}else if(erase){ //Met la couleur des pixels à celle du background
 			var couleur = $('.background').css('background-color');
 			$(this).css( "background-color", couleur);
-			console.log(couleur);
+			//console.log(couleur);
 		}
 	})
 	.on('mousedown', '.box', function(){
 		var couleur = $(this).css('background-color');
 		$('.jscolor').css( "background-color", couleur);
 		$('.jscolor').val(rgb2hex(couleur).substr(1,6).toUpperCase());
-		console.log(couleur);
+		//console.log(couleur);
 	})
 	.on('click','.background', function(){ //Pour choisir une couleur de fond au pixel art
 		var bgcouleur = $(this).css( "background-color");

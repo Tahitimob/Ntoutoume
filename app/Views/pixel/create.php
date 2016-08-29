@@ -24,7 +24,7 @@
   			</div>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary btn-lg btn-crud" data-toggle="modal" data-target="#myModal">
-          Raccourcis clavier
+          Aide
         </button>
         <!-- Modal -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -41,6 +41,8 @@
                   <p>< S > Récupère la couleur du carré survolé</p>
                   <br>
                   <p>< G > Pour gommer</p>
+                  <br>
+                  <p>Cliquez sur la case background pour colorier tous les pixels de la même couleur</p>
                 </div>
               </div>
               <div class="modal-footer modal-style">

@@ -80,7 +80,7 @@ class Pixelart {
 		for($i = 0; $i < $this->getWidth(); $i++){
 			for($j = 0; $j < $this->getWidth(); $j++){
 				$rgb = $array[$z];
-				$bloc .= "<div class='case' style='width:".$width."px; height:".$width."px; float: left; background-color:".$rgb."; border:1px ridge black; box-sizing: border-box '></div>";
+				$bloc .= "<div data-id='".($z+1)."' class='case' style='width:".$width."px; height:".$width."px; float: left; background-color:".$rgb."; border:1px ridge black; box-sizing: border-box '></div>";
 				$z++;
 			}
 		}
