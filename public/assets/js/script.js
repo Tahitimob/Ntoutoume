@@ -35,7 +35,25 @@ $(function(){
 			fillup($('[data-id='+(id+30)+']'));
 		}
 
-		
+		/*console.log(Math.round(Date.now() / 1000)-now);
+
+		var elt = document.getElementById('wrapper').children[id-1];
+		var samecolor = $(document.getElementById('wrapper').children[id-1]).css('background-color');
+		var couleur = $('.jscolor').css('background-color');
+		$(elt).css( "background-color", couleur);
+		if(id > width && ($('[data-id='+(id-width)+']').css('background-color') == samecolor) ) {
+			//fillup(id-width);
+			console.log(id-width);
+		}
+		if(id < 900 && (id % width != 0) && ($('[data-id='+(id+1)+']').css('background-color') == samecolor) ) {
+			fillup(id+1);
+		}
+		if(id <= (width*width)-width && ($('[data-id='+(id+width)+']').css('background-color') == samecolor)){
+			fillup(id+width);
+		}
+		if(id > 1 && (id % width != 1) && ($('[data-id='+(id-1)+']').css('background-color') == samecolor) ) {
+			fillup(id-1);
+		}*/
 	}
 	//Différents évènements pour changer les couleurs du pixelart
 	var hover = false;
